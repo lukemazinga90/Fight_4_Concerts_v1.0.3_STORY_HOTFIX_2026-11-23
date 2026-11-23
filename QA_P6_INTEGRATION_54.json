@@ -1,0 +1,279 @@
+{
+  "passed": 54,
+  "total": 54,
+  "failed": [],
+  "checks": [
+    {
+      "name": "Startup title displayed",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "Full playable roster 16",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "Lou in correct slot 15",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "Old characters positions preserved",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "Two campaigns exactly 18 scene defs",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "All 56 Lou frames registered",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "Lou attack frames paired to Luke",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "Lou intro lines set",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "Old Luke assets untouched by new code",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "Lou starts locked",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "Routes 8 and stage 7 proper",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "Luke prologue event",
+      "ok": true,
+      "details": "['prologue']"
+    },
+    {
+      "name": "Luke prologue artwork loads",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "Luke win 1 sequence",
+      "ok": true,
+      "details": "{'step': 1, 'state': 'story', 'events': ['after1']}"
+    },
+    {
+      "name": "Luke win 2 sequence",
+      "ok": true,
+      "details": "{'step': 2, 'state': 'story', 'events': ['after2']}"
+    },
+    {
+      "name": "Luke win 3 sequence",
+      "ok": true,
+      "details": "{'step': 3, 'state': 'story', 'events': ['after3', 'mid3']}"
+    },
+    {
+      "name": "Luke win 4 sequence",
+      "ok": true,
+      "details": "{'step': 4, 'state': 'story', 'events': ['after4']}"
+    },
+    {
+      "name": "Luke win 5 sequence",
+      "ok": true,
+      "details": "{'step': 5, 'state': 'story', 'events': ['after5']}"
+    },
+    {
+      "name": "Luke win 6 sequence",
+      "ok": true,
+      "details": "{'step': 6, 'state': 'story', 'events': ['after6']}"
+    },
+    {
+      "name": "Luke rival reveal",
+      "ok": true,
+      "details": "{'state': 'story', 'events': ['pre7a', 'pre7b', 'pre7c'], 'route': 'LOU REED'}"
+    },
+    {
+      "name": "Luke correct rival fight starts",
+      "ok": true,
+      "details": "{'state': 'versus', 'p1': 'Luke', 'p2': 'Lou Reed', 'needed': ['Luke', 'LouReed']}"
+    },
+    {
+      "name": "Luke rival fight frame assets ready",
+      "ok": true,
+      "details": "{'p1': True, 'p2': True, 'errors': {}}"
+    },
+    {
+      "name": "Luke after rival scenes",
+      "ok": true,
+      "details": "{'step': 7, 'events': ['after7a', 'after7b', 'after7c'], 'unlocked': True, 'state': 'story'}"
+    },
+    {
+      "name": "Lou unlocked after 7th Luke victory",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "Luke Max final boss",
+      "ok": true,
+      "details": "{'state': 'versus', 'enemy': 'MAX PEZZALI'}"
+    },
+    {
+      "name": "Luke ending 4 scenes",
+      "ok": true,
+      "details": "{'step': 8, 'state': 'story', 'events': ['end1', 'end2', 'end3', 'end4']}"
+    },
+    {
+      "name": "Luke campaign finished",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "Luke total 18 scenes played",
+      "ok": true,
+      "details": "['prologue', 'after1', 'after2', 'after3', 'mid3', 'after4', 'after5', 'after6', 'pre7a', 'pre7b', 'pre7c', 'after7a', 'after7b', 'after7c', 'end1', 'end2', 'end3', 'end4']"
+    },
+    {
+      "name": "Luke campaign recorded",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "LouReed prologue event",
+      "ok": true,
+      "details": "['prologue']"
+    },
+    {
+      "name": "LouReed prologue artwork loads",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "LouReed win 1 sequence",
+      "ok": true,
+      "details": "{'step': 1, 'state': 'story', 'events': ['after1']}"
+    },
+    {
+      "name": "LouReed win 2 sequence",
+      "ok": true,
+      "details": "{'step': 2, 'state': 'story', 'events': ['after2']}"
+    },
+    {
+      "name": "LouReed win 3 sequence",
+      "ok": true,
+      "details": "{'step': 3, 'state': 'story', 'events': ['after3', 'mid3']}"
+    },
+    {
+      "name": "LouReed win 4 sequence",
+      "ok": true,
+      "details": "{'step': 4, 'state': 'story', 'events': ['after4']}"
+    },
+    {
+      "name": "LouReed win 5 sequence",
+      "ok": true,
+      "details": "{'step': 5, 'state': 'story', 'events': ['after5']}"
+    },
+    {
+      "name": "LouReed win 6 sequence",
+      "ok": true,
+      "details": "{'step': 6, 'state': 'story', 'events': ['after6']}"
+    },
+    {
+      "name": "LouReed rival reveal",
+      "ok": true,
+      "details": "{'state': 'story', 'events': ['pre7a', 'pre7b', 'pre7c'], 'route': 'LUKE'}"
+    },
+    {
+      "name": "LouReed correct rival fight starts",
+      "ok": true,
+      "details": "{'state': 'versus', 'p1': 'Lou Reed', 'p2': 'Luke', 'needed': ['LouReed', 'Luke']}"
+    },
+    {
+      "name": "LouReed rival fight frame assets ready",
+      "ok": true,
+      "details": "{'p1': True, 'p2': True, 'errors': {}}"
+    },
+    {
+      "name": "LouReed after rival scenes",
+      "ok": true,
+      "details": "{'step': 7, 'events': ['after7a', 'after7b', 'after7c'], 'unlocked': True, 'state': 'story'}"
+    },
+    {
+      "name": "LouReed Max final boss",
+      "ok": true,
+      "details": "{'state': 'versus', 'enemy': 'MAX PEZZALI'}"
+    },
+    {
+      "name": "LouReed ending 4 scenes",
+      "ok": true,
+      "details": "{'step': 8, 'state': 'story', 'events': ['end1', 'end2', 'end3', 'end4']}"
+    },
+    {
+      "name": "LouReed campaign finished",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "LouReed total 18 scenes played",
+      "ok": true,
+      "details": "['prologue', 'after1', 'after2', 'after3', 'mid3', 'after4', 'after5', 'after6', 'pre7a', 'pre7b', 'pre7c', 'after7a', 'after7b', 'after7c', 'end1', 'end2', 'end3', 'end4']"
+    },
+    {
+      "name": "LouReed campaign recorded",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "Lou available in unlockedRoster",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "Lou persisted across reload",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "Lou selectable as rival",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "Lou in VS battle ready",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "All 14 older campaign routes intact",
+      "ok": true,
+      "details": "[]"
+    },
+    {
+      "name": "No javascript exceptions",
+      "ok": true,
+      "details": "[]"
+    },
+    {
+      "name": "No HTTP missing assets",
+      "ok": true,
+      "details": "[]"
+    },
+    {
+      "name": "Touch landscape title renders",
+      "ok": true,
+      "details": ""
+    }
+  ],
+  "js_errors": [],
+  "http_errors": []
+}

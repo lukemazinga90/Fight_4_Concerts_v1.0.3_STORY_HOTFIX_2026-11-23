@@ -1,0 +1,330 @@
+FIGHT 4 CONCERTS — PROCEDURA OBBLIGATORIA SPRITE 56 FRAME
+======================================================
+Versione documento: 1.1 — 2026-11-20
+Percorso: radice della copia di sviluppo /mnt/data/f4c_v101_staging/
+Stato: riferimento di produzione; NON sostituisce l'ispezione delle 56 pose del personaggio di base.
+Origine: mappa FR/frameFor della V17 preservata nel file index.html attuale; ATTACK_FRAME_MAP per personaggio/outfit; confronto con PNG effettivi.
+SHA256 index.html al momento della stesura: 443741ed80a679c8adceee7eabe681e711e018e748651f4896160ed7a4433a4f
+
+SCOPO
+-----
+Ogni personaggio del gioco possiede 56 PNG 000.png...055.png. Ogni indice è una posa
+FUNZIONALE, non semplicemente la n-esima figura disponibile in un foglio generato.
+Quando viene creato un rivale o una variante: stesso indice del combattente associato
+= stessa categoria di azione (idle, corsa, pugno, calcio, parata, salto, KO, speciale),
+con fase dell'animazione corrispondente e punto di contatto coerente.
+
+NOTA FONDAMENTALE SU ORIGINALI, RICOSTRUZIONE E ECCEZIONI
+-------------------------------------------------------
+Non è stata ritrovata una specifica originaria completa parola per parola che
+classifichi visivamente tutti i 56 PNG per ogni outfit. Si è recuperata la mappa
+numerica V17 effettivamente nel motore. La tabella seguente è la
+RICOSTRUZIONE DEL CONTRATTO NOMINALE. NON sovrascrive le immagini reali:
+la mappa di pugni e calci è personalizzata per molti personaggi.
+SE C'È CONFLITTO FRA TABELLA NOMINALE E BASE REALE, prevale l'indice visivo
+DEL PERSONAGGIO ASSOCIATO, e il mapping ATTACK_FRAME_MAP attivo del gioco.
+
+NEL CODICE ATTUALE:
+- FR.idle=0, walk=4, guardStand=14, crouchBlock=16, jump=18,
+  jumpKick=22, punchH=25, punchL=28, kickH=31, kickL=35,
+  hitStand=38, hitCrouch=40, ko=42, victory=45, defeat=49, special=51.
+- frameFor usa idle 000-003, walk 004-009, crouch 012-013,
+  block 014-015 (e 012-013 quando abbassati), jump 018-021,
+  jumpKick 022-024, hit 038-041, vittoria 045-048, speciale 051-055.
+- 010/011 non sono selezionati da frameFor; 016/017 sono dichiarati
+  per guardia bassa ma la routine attuale usa 012/013.
+- Le mosse a terra usano ATTACK_FRAME_MAP per ogni sheet/outfit.
+- La funzione di KO può usare 044 e 050 direttamente, e NON tutte le fasi
+  dichiarate di KO/sconfitta vengono necessariamente percorse in arena.
+- SHEET_COLS=7, SHEET_ROWS=8 nel codice è un retaggio di una vecchia
+  esportazione e NON impone il ritaglio dei nuovi fogli PNG: gli ultimi fogli
+  sorgenti approvati dai personaggi sono spesso a 8 COLONNE x 7 RIGHE.
+  Il dato autoritativo è SEMPRE l'ordine di 56 PNG e la geometria del set base.
+
+INDICI 000–055 — CONTRATTO NOMINALE RICOSTRUITO DA FR/FRAMEFOR
+------------------------------------------------------------
+000 | Idle/guardia neutra A
+001 | Idle/guardia neutra B
+002 | Idle/guardia neutra C
+003 | Idle/guardia neutra D
+004 | Camminata/corsa, fase 1/6
+005 | Camminata/corsa, fase 2/6
+006 | Camminata/corsa, fase 3/6
+007 | Camminata/corsa, fase 4/6
+008 | Camminata/corsa, fase 5/6
+009 | Camminata/corsa, fase 6/6
+010 | Transizione/riserva 1/2 (non chiamata da frameFor attuale)
+011 | Transizione/riserva 2/2 (non chiamata da frameFor attuale)
+012 | Accovacciamento e/o parata bassa 1/2 (usato da frameFor)
+013 | Accovacciamento e/o parata bassa 2/2 (usato da frameFor)
+014 | Parata in piedi 1/2 (usato da frameFor)
+015 | Parata in piedi 2/2 (usato da frameFor)
+016 | Parata bassa nominale 1/2 (FR.crouchBlock=16; nel frameFor attuale si usano 012/013)
+017 | Parata bassa nominale 2/2 (FR.crouchBlock=16; nel frameFor attuale si usano 012/013)
+018 | Salto: stacco/salita
+019 | Salto: salita
+020 | Salto: apice/discesa iniziale
+021 | Salto: discesa/atterraggio
+022 | Calcio aereo: preparazione
+023 | Calcio aereo: colpo
+024 | Calcio aereo: recupero
+025 | Pugno alto: preparazione
+026 | Pugno alto: impatto
+027 | Pugno alto: ritorno
+028 | Pugno basso: preparazione
+029 | Pugno basso: impatto
+030 | Pugno basso: ritorno
+031 | Calcio alto: preparazione
+032 | Calcio alto: estensione
+033 | Calcio alto: impatto
+034 | Calcio alto: ritorno
+035 | Calcio basso: preparazione
+036 | Calcio basso: impatto
+037 | Calcio basso: ritorno
+038 | Reazione colpito in piedi 1/2
+039 | Reazione colpito in piedi 2/2
+040 | Reazione colpito da accovacciato 1/2
+041 | Reazione colpito da accovacciato 2/2
+042 | KO: inizio della caduta (nominale)
+043 | KO: caduta (nominale)
+044 | KO: a terra (se HP <= 0 in arena)
+045 | Vittoria, fase 1/4
+046 | Vittoria, fase 2/4
+047 | Vittoria, fase 3/4
+048 | Vittoria, fase 4/4
+049 | Sconfitta/caduta finale 1/2 (050 per stato game over)
+050 | Sconfitta/caduta finale 2/2 (050 per stato game over)
+051 | Speciale: preparazione
+052 | Speciale: carica
+053 | Speciale: rilascio
+054 | Speciale: espansione
+055 | Speciale: massimo/chiusura
+
+REGOLA PRIORITARIA: PROFILO VISIVO DELLA COPPIA
+----------------------------------------------
+Esempi di coppie attualmente definite nel progetto:
+  - Guidotti -> VascoBrondi
+  - Giannini -> KurtCobain
+  - VittoC -> FilippoConti
+  - VittoP -> Faccianuvola
+  - Lore -> FabrizioDeAndre
+  - Frillo -> PieroPelu
+  - Rettori -> DonatellaRettore
+  - Luke -> LouReed (futuro)
+
+
+Il futuro rivale di Luke va creato sul moveset esatto di Luke, NON su
+una tabella di altri personaggi. Per ogni outfit separato va rifatta la stessa
+verifica perché le animazioni degli ALT possono usare indici di attacco diversi.
+MattiaSgreccia è un BOSS NON SBLOCCABILE, basato sul set di Rettori; Donatella
+è il personaggio sbloccabile, sempre sul set di Rettori.
+
+MAPPA ATTACCHI DAVVERO UTILIZZATA DAL MOTORE
+-------------------------------------------
+Il JSON ATTACK_FRAME_MAP all'interno di index.html prevale sulla mappa nominale
+per punchH, punchL, kickH e kickL. Elenco trascritto automaticamente dal codice:
+  Guidotti: punchH=[28, 29, 30] | punchL=[30, 31, 32] | kickH=[36, 37, 38] | kickL=[35, 39, 39]
+  Giannini: punchH=[28, 29, 30] | punchL=[30, 31, 32] | kickH=[36, 37, 38] | kickL=[35, 39, 39]
+  VittoC: punchH=[28, 29, 30] | punchL=[30, 31, 32] | kickH=[36, 37, 38] | kickL=[35, 39, 39]
+  VittoP: punchH=[25, 26, 27, 28] | punchL=[29, 30, 30] | kickH=[31, 32, 33] | kickL=[34, 35, 36]
+  Lore: punchH=[25, 26, 27, 28] | punchL=[33, 34, 35] | kickH=[29, 30, 31, 32] | kickL=[33, 34, 35]
+  Frillo: punchH=[25, 26, 27, 28] | punchL=[33, 34, 35] | kickH=[29, 30, 31, 32] | kickL=[33, 34, 35]
+  Rettori: punchH=[25, 26, 27, 28] | punchL=[33, 34, 35] | kickH=[29, 30, 31, 32] | kickL=[33, 34, 35]
+  Luke: punchH=[28, 29, 29] | punchL=[30, 31, 32] | kickH=[36, 37, 37] | kickL=[35, 39, 39]
+  DonatellaRettore eredita ATTACK_FRAME_MAP.Rettori.
+  MattiaSgreccia eredita ATTACK_FRAME_MAP.Rettori.
+  Faccianuvola eredita ATTACK_FRAME_MAP.VittoP.
+  FabrizioDeAndre eredita ATTACK_FRAME_MAP.Lore.
+  PieroPelu eredita ATTACK_FRAME_MAP.Frillo.
+  VascoBrondi e KurtCobain devono essere controllati anche sulla mappa effettivamente
+  scelta dal motore nel futuro rilascio: la sola geometria ereditata non basta.
+
+ESEMPIO CRITICO: RETTORI / DONATELLA
+-----------------------------------
+Per Rettori, i frame attacco a terra attualmente richiesti sono:
+  PUGNO ALTO = 025,026,027,028
+  PUGNO BASSO = 033,034,035
+  CALCIO ALTO = 029,030,031,032
+  CALCIO BASSO = 033,034,035
+Il 033 è quindi usato in DUE categorie di attacco dal codice di Rettori
+(punchL e kickL), anche se nella sequenza nominale FR è un calcio alto.
+NON bisogna stabilire l'azione basandosi soltanto sulla tabella generica.
+Guardare Rettori/033.png effettivo e copiare quella tipologia di posa in
+DonatellaRettore/033.png; fare lo stesso per tutti gli altri 55 indici.
+Se un frame serve due attacchi diversi, documentare l'ambiguità prima di
+qualsiasi cambio di ATTACK_FRAME_MAP.
+
+PROCEDURA VINCOLANTE PER LA CREAZIONE DI QUALSIASI NUOVO PERSONAGGIO
+------------------------------------------------------------------
+FASE A — RIFERIMENTI (prima di generare o editare immagini)
+ A1. Identificare personaggio, outfit, personaggio di riferimento esatto.
+ A2. Aprire e visionare i PNG 000–055 di quel personaggio/outfit; non
+     limitarsi a guardare un collage o l'artwork del roster.
+ A3. Fare una tavola confronto numerata del set base: 8x7 O 7x8 purché
+     l'ordine sia 000,001,...055 da sinistra a destra e dall'alto in basso.
+ A4. Annotare per ciascun indice la mossa VISIVA e, per i colpi,
+     controllare ATTACK_FRAME_MAP nel file HTML corrente.
+ A5. Confrontare più frame dello stesso personaggio e stesso outfit per
+     design, proporzioni, colore, forma dei capelli, scarpe e accessori.
+
+FASE B — GENERAZIONE E RITAGLIO
+SPECIFICA OBBLIGATORIA DEL FOGLIO SORGENTE (quando si genera uno spritesheet unico)
+ B0. Lo spritesheet sorgente deve essere costruito in 8 colonne x 7 righe = 56 celle totali.
+ B0.1. Dimensione consigliata e standard di PRODUZIONE: 96x96 px per cella.
+       Quindi foglio completo = 768x672 px.
+ B0.2. Ogni posa deve restare COMPLETAMENTE dentro la propria cella 96x96,
+       senza invadere le celle vicine e senza effetti tagliati.
+ B0.3. Sfondo del foglio sorgente: VERDE FLUO PIENO / chroma key puro,
+       preferibilmente #00FF00 (o verde equivalente ad alta saturazione),
+       uniforme su tutto il foglio. Questo è ora il requisito standard
+       per facilitare ritaglio, segmentazione e pulizia dei frame.
+ B0.4. Il verde fluo è richiesto SOLO per il foglio master/sorgente da segmentare.
+       I PNG finali 000.png...055.png devono invece avere alpha reale con
+       sfondo trasparente pulito.
+ B1. Disegnare sempre azioni equivalenti al corrispondente indice base.
+     Nessuna inversione di corsa/salto/guardia, pugni/calci, KO/speciale.
+ B2. Se possibile, generare direttamente 56 PNG separati con alpha reale.
+     Se invece si genera prima un foglio unico, usare lo standard 8x7 con celle
+     96x96 su sfondo verde fluo e verificare che ogni figura ed effetto resti
+     completamente nella propria cella, senza sconfinare nelle celle vicine e
+     senza contorni tagliati.
+ B3. Mai suddividere automaticamente un foglio in rettangoli uguali SENZA
+     verificare margini e righe: le generazioni possono avere spaziature
+     non uniformi. Segmentare dalle separazioni reali e controllare ogni cella.
+ B4. Se il ritaglio produce arti o oggetti provenienti dalla cella sopra,
+     NON nasconderli con recoloring, crop aggressivi o ritagli casuali:
+     riparare/riprodurre solo il frame danneggiato e ricontrollarlo.
+ B5. File esatti 000.png ... 055.png, zero indici mancanti/duplicati.
+ B6. Dopo il ritaglio: PNG finali in trasparenza RGBA (sfondo realmente
+     trasparente, non checkerboard bianco e non verde residuo), nessun alone,
+     nessun bordo verde del chroma key, nessun FX troncato; pixel art 16-bit nitida.
+
+FASE C — COMPATIBILITÀ COL MOTORE
+ C1. Evitare una canvas unica arbitraria per ogni combattente: frame base
+     e meta [size, anchor] possono variare per indice. Il codice usa
+     FRAME_FILES[set][indice] con dimensioni e punti d'ancoraggio distinti.
+ C2. Per un rivale, riferirsi alla geometria del personaggio associato,
+     come avviene nei set PieroPelu/Frillo e DonatellaRettore/Rettori,
+     MA ricontrollare la posizione effettiva dei piedi per ogni posa.
+ C3. Controllare scala visiva coerente tra idle, camminata, hit, KO,
+     crouch, salto, attacchi e speciale: non ridurre per errore il
+     combattente conservando margini trasparenti eccessivi.
+ C4. La speciale è obbligatoriamente in 051–055 e deve avere una
+     progressione coerente con l'animazione, senza cambiare 000–050
+     se l'incarico richiede esclusivamente la modifica della speciale.
+ C5. Nessuna modifica al moveset, a ATTACK_FRAME_MAP o al codice
+     delle collisioni senza richiesta esplicita e test documentato.
+
+FASE D — CONTROLLO INDICE PER INDICE (OBBLIGATORIO)
+ D1. Costruire un confronto 56×2 affiancato: a sinistra BASE i,
+     a destra NUOVO i, con etichetta numerica i.
+ D2. Per ciascun indice segnare SOLO:
+       OK    = medesima tipologia di posa e fase compatibile;
+       MAP   = posa esiste, ma è in un altro indice del nuovo foglio;
+       REDO  = posa necessaria assente, danneggiata o inappropriata;
+       QA    = dubbio visivo, da esaminare manualmente.
+ D3. Valutare anatomicamente: esattamente due gambe e due braccia dove
+     visibili, niente arti sovrapposti/doppi, giunture e abiti continui,
+     forma delle mani/piedi coerente e nessuna porzione clippata.
+ D4. Verificare 000–009 (idle/movimento), 012–017 (guardia),
+     018–024 (salto/colpo aereo), 025–037 (colpi), 038–050
+     (danni/KO/vittoria) e 051–055 (speciale), con priorità
+     all'effettivo comportamento del personaggio base.
+ D5. Non approvare lo spritesheet complessivo finché tutti e 56 gli
+     indici non sono stati verificati. Non basta '56 file presenti'.
+
+FASE E — INTEGRAZIONE E TEST
+ E1. Conservare l'originale approvato; il set nuovo si lavora
+     provvisoriamente fuori dalle cartelle di release fino a QA positivo.
+ E2. Inserire il set in frames/<SetName>/000.png ... 055.png.
+ E3. Metadati / coppia / scala / mapping di attacchi coerenti; nessuna
+     nuova casella roster quando si tratta di rivale sbloccabile associato.
+ E4. Test browser locale: tutti i 56 PNG caricano; idle, corsa,
+     accovacciamento, guardia, 4 attacchi, salto, hit, KO, vittoria,
+     speciale e combattimento completo; verificare scala, piedi e FX.
+ E5. Test su smartphone reale prima di promuovere il set a release.
+ E6. Aggiornare il registro v1.0.1: quali frame corretti, quali rimappati,
+     quali non definitivi. Evitare build/ZIP Netlify ad ogni correzione.
+
+CRITERIO FINALE
+--------------
+Per qualunque NUOVO spritesheet da generare, la richiesta standard deve sempre
+includere anche queste specifiche tecniche minime:
+- 56 pose totali in ordine 000–055
+- layout 8 colonne x 7 righe
+- 96x96 px per cella (foglio totale 768x672 px)
+- sfondo verde fluo uniforme (#00FF00) nel foglio sorgente
+- figura intera contenuta nella propria cella
+- successiva esportazione in 56 PNG trasparenti puliti
+
+L'ordine 000–055 NON è negoziabile per una coppia di personaggi: stessa
+categoria di azione allo stesso indice, e gli attacchi realmente scelti da
+frameFor()/ATTACK_FRAME_MAP devono corrispondere visivamente.
+Se un nuovo foglio ha una speciale splendida e pose d'attacco in indice
+sbagliato, NON è pronto per essere importato nel gioco.
+
+CORREZIONE NECESSARIA ALLA FUTURA PRODUZIONE
+-------------------------------------------
+Il confronto dei fogli Donatella/Rettori forniti dall'utente ha già mostrato
+che il design di Donatella è valido, ma la corrispondenza di molte pose nel
+blocco centrale NON è automaticamente garantita. Prima di sostituire gli
+sprite correnti, confrontare gli indici uno per uno, rimappare solo pose
+veramente equivalenti e rifinire le residue. Non rigenerare 56 pose
+per una discrepanza risolvibile in pochi frame.
+
+FINE DOCUMENTO
+
+
+APPENDICE 1.1 — CASO PRATICO DONATELLA / RETTORI (2026-11-20)
+----------------------------------------------------------------
+Prima di estrarre, identificare le figure REALI: il foglio approvato di Donatella
+misura 1774x887 e contiene 58 figure riconoscibili distribuite su 7 righe
+(8,8,8,9,9,8,8). NON ritagliare per convenzione 8x7: taglierebbe arti
+ed effetti e distribuirebbe frammenti delle figure precedenti.
+La segmentazione guidata dalle componenti connesse fornisce un inventario
+S00..S57 che va associato, PER TIPO DI MOVIMENTO, a Rettori/000..055.
+Mappatura indice per indice: MAPPATURA_DONATELLA_56_FRAME.txt nella radice.
+Conservare la sorgente disegnata approvata (capelli platino, giacca
+nero/oro, pantaloni neri); NON ricreare il personaggio ricolorando Rettori.
+Per la compatibilità vengono mantenuti dimensioni canvas e ancoraggi
+del corrispondente frame di Rettori. Tre figure sorgente sono volutamente
+riusate in posizioni compatibili, da affinare solo in eventuali patch future.
+Non ridefinire ATTACK_FRAME_MAP per mascherare un'incongruenza grafica.
+La verifica funzionale nel browser e la coerenza delle pose non sostituiscono
+il test completo su smartphone reale prima del prossimo deploy.
+FINE APPENDICE 1.1
+
+
+ADDENDUM 2026-11-20: SCALA E ANCORAGGIO RENDERING
+------------------------------------------------
+Lo SPR_H=96 è un'UNITÀ LOGICA di riferimento, NON una cella PNG 96x96.
+Per definizione di ground, scale, anchor, tolleranze e QA obbligatorio si veda
+STANDARD_SCALA_BASELINE_ROSTER.txt nella stessa cartella del gioco.
+Il benchmark effettivo è Guidotti/000: h=93 px logici, piedi Y=186.
+Le pose 000-002 sono neutre; 003 può essere corsa, perciò il motore
+è stato aggiornato per non usarlo automaticamente nel ciclo idle.
+Non alterare l'aspetto grafico approvato quando basta correggere scala o anchor.
+
+
+ADDENDUM 2026-11-20B — FILE OPERATIVI PER LA FAMIGLIA RETTORI
+------------------------------------------------------------
+Per Rettori, DonatellaRettore e MattiaSgreccia NON basta questa procedura generale.
+Consultare sempre anche:
+- MAPPATURA_RETTORI_56_VISIVA.txt  -> sequenza visiva obbligatoria 000-055
+- REPORT_MATTIA_vs_RETTORI_56_FRAME.txt -> audit dell'ultimo foglio Mattia generato
+- working_mattia_latest_sheet_extracted/ -> estrazione di lavoro 000..055 dell'ultimo foglio Mattia
+
+Se si rigenera Mattia da zero, il target NON è '56 pose generiche da picchiaduro',
+ma la copia tipologica uno-a-uno del foglio Rettori: stessa famiglia di posa allo
+stesso indice, con speciale boss personalizzata solo dove richiesto.
+
+
+ADDENDUM 2026-11-20C — MATTIA NUOVA VERSIONE ATTIVA
+-------------------------------------------------
+Il report REPORT_MATTIA_vs_RETTORI_56_FRAME.txt documenta lo spritesheet precedente
+NON CONFORME e non descrive il set attualmente in gioco. Il set attivo è
+frames/MattiaSgreccia/000.png...055.png, ricostruito e verificato come categorie
+di mosse della famiglia Rettori. Nella cartella è presente anche il report
+MATTIA_FIX_E_QA_2026-11-20.txt. Ancoraggio e scala sono nel codice index.html.
+Due frame (035 e 036) riutilizzano pose equivalenti per eliminare clipping.
+051-054: speciale Occhio del Dominio con corpo completo, non il foglio rosso grezzo.

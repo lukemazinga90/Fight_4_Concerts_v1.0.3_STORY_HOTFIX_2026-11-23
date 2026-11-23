@@ -1,0 +1,33 @@
+FIGHT 4 CONCERTS — PATCH GRAFICA v1.0.1 — 20 NOV 2026
+======================================================
+
+SOSTITUZIONI EFFETTUATE
+- 56/56 frame in frames/Rettori/000.png ... 055.png sostituiti con la grafica
+  approvata: camicia a righe rosse, T-shirt bianca, pantaloncini di jeans,
+  capelli ricci e sneakers; fonte: sprite_di_rettori_set_di_mosse_pixel_art.png.
+- Estratti da righe visive NON equidistanti, preservato ordine 000-055.
+- Dimensioni canvas PNG del set precedente mantenute per evitare modifiche
+  agli ancoraggi del motore. Altri personaggi e codice non cambiati.
+- 6 tavole narrative problematiche sostituite in assets/:
+  C_giannini_prologue16.png
+  C_giannini_mid16.png
+  C_giannini_duel16.png
+  C_giannini_tokyo16.png
+  C_cobain_prologue16.png
+  C_cobain_rest16.png
+  Sono artwork originali stile 16-bit privi del messaggio di errore incorporato.
+  Il testo della storia resta disegnato dinamicamente dal motore.
+
+BACKUP
+- /mnt/data/F4C_BACKUP_ORIGINALI_PRE_FIX_RETTORI_GIANNINI_2026-11-20/
+
+QA GRAFICO
+- Confronto 56 pose: F4C_FIX_RETTORI_GIANNINI_QA/Rettori_56_correct_shorts.jpg
+- Sei scene: F4C_FIX_RETTORI_GIANNINI_QA/Giannini_Cobain_6_scenes_QA.jpg
+- Nessun intervento su Mattia/Donatella.
+
+LIMITI
+- Il test visivo su browser locale non sostituisce un collaudo smartphone reale.
+- I frame di Rettori seguono il foglio approvato e sono stati adattati alle
+  dimensioni storiche dei PNG. Alcune transizioni di scala nelle pose aeree
+  potranno richiedere una rifinitura separata.

@@ -1,0 +1,34 @@
+CHECK IMMAGINI CAMPAGNE — 2026-11-20
+=====================================
+Mattia rigenerato da: /mnt/data/ghostwriter_images/generated/a_single_large_transparent_background_2d_pixel_art_1.png
+Frame Mattia installati in: frames/MattiaSgreccia/000..055.png
+
+Asset grafici referenziati in index.html: 121
+Asset mancanti: 0
+
+Verifica directory personaggi (56 PNG attesi):
+- Guidotti: 56 file -> OK
+- VascoBrondi: 56 file -> OK
+- Giannini: 56 file -> OK
+- KurtCobain: 56 file -> OK
+- VittoC: 56 file -> OK
+- FilippoConti: 56 file -> OK
+- VittoP: 56 file -> OK
+- Faccianuvola: 56 file -> OK
+- Lore: 56 file -> OK
+- FabrizioDeAndre: 56 file -> OK
+- Frillo: 56 file -> OK
+- PieroPelu: 56 file -> OK
+- Rettori: 56 file -> OK
+- DonatellaRettore: 56 file -> OK
+- MattiaSgreccia: 56 file -> OK
+- Luke: 56 file -> OK
+- MaxPezzali: 56 file -> OK
+
+Controllo asset chiave campagne 0-14:
+MISSING KEY: C_lore_timeline1 -> None
+MISSING KEY: C_lore_timeline2 -> None
+MISSING KEY: C_lore_timeline3 -> None
+MISSING KEY: C_lore_timeline4 -> None
+MISSING KEY: C_lore_timeline5 -> None
+MISSING KEY: C_lore_timeline6 -> None

@@ -1,0 +1,142 @@
+{
+  "Guidotti": {
+    "original": [
+      "Questo match è proprio croccantino",
+      "Avresti anche del gusto, non fosse per quelle chitarre",
+      "Venerdì che fai? Concertino di Hachiko?"
+    ],
+    "alt": [
+      "E quindi tu saresti un Sagittario ascendente Vergine. Interessante eh",
+      "Martedì sera a Tripalle faccio un workshop di tarocchi, ti può interessare?",
+      "Cibo? Sopravvalutato. Il mio credo prevede solo dieta liquida"
+    ]
+  },
+  "Giannini": {
+    "original": [
+      "今夜、すごい女がいたの見た？",
+      "Dai che forse stasera c'è un vero chitarrista a suonare",
+      "Serata techno? Tanto valeva che mi chiedevi di andare ad un comizio di Salvini"
+    ],
+    "alt": [
+      "たぶん、俺の言ってること分かってないんだな。今夜は女が山ほどいるんだぜ！",
+      "Visti i tuoi gusti musicali hai mai pensato di fare seppuku?",
+      "Bello è ciò che piace,\ne comodo è chiamarlo\nbellezza, per non capire"
+    ]
+  },
+  "Frillo": {
+    "original": [
+      "Hai per caso un Oki? Ho la schiena a pezzi",
+      "Fatti da parte. Conosco questa band da quando suonavano alla Sagra della ficamaschia dorata di Porto Ercole",
+      "Verrei anche ma ho speso tutti i miei soldi per andare a quel concerto a Tsiblisi. Sono solo 40 ore di Flixbus"
+    ],
+    "alt": [
+      "Oh bischero, la birra la vòi o l’autografo del cantante? Te lo servo io, ma a rate come la Viola",
+      "Fatti sotto, figliolo, la band attacca tra un’ora. Il coperto però te lo paghi, eh",
+      "Stasera c’è concerto e la Viola gioca. Scegli tu: il rock o il tifo. Io ho già scelto il vino"
+    ]
+  },
+  "Vitto P": {
+    "original": [
+      "Sto shippando questi due da tre settimane e loro manco si parlano. Vibes",
+      "Ho una playlist dello stress in riproduzione dal lunedì. Nessun drop mi basta più. Crisi",
+      "Ok boomer, il mio ship preferito è il ritornello del pezzo. Non chiedere"
+    ],
+    "alt": [
+      "🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕",
+      "🖕🏿🖕🏿🖕🏿🖕🏿🖕🏿🖕🏿🖕🏿🖕🏿🖕🏿🖕🏿🖕🏿🖕🏿🖕🏿🖕🏿",
+      "🖕🏻🖕🏻🖕🏻🖕🏻🖕🏻🖕🏻🖕🏻🖕🏻🖕🏻🖕🏻🖕🏻🖕🏻🖕🏻🖕🏻"
+    ]
+  },
+  "Vitto C": {
+    "original": [
+      "Questo è il mio regno, vediamo come reggi 8 ore di set",
+      "Anche la mia sveglia suona a 150 BPM",
+      "Il vero sballo è non aver mal di schiena"
+    ],
+    "alt": [
+      "C sta per Conti baby. Conti Valerio",
+      "Mi stai dicendo che preferisci Fiorenzato? Ti pentirai di questa affermazione",
+      "Perchè mi dici che sembro agitata? Sono solo al decimo caffè della giornata"
+    ]
+  },
+  "Rettori": {
+    "original": [
+      "Bella merde!",
+      "El me acento toscano? Certo che no lo go perso",
+      "Una Rettori non è mai in ritardo, Frodo Baggins. Né in anticipo. Arriva precisamente quando intende farlo"
+    ],
+    "alt": [
+      "Oh bono, sei venuto all’Isolotto a fare lo chic? Qui si combatte col cuore",
+      "Oh babbo, la musica all’Isolotto si fa in strada, mica in teatro. Se ti piace la rima, attacca!",
+      "Passi per via dell’Isolotto con la radio a palla? Qui si canta forte, o ti ci mando io a farti le orecchie"
+    ]
+  },
+  "Luke": {
+    "original": [
+      "Arregimi un attimo i sandali. Devo andare a pogare",
+      "Socmel mi gira tutto. Bere quell'americano alla goccia non è stata una grande idea",
+      "Senti ma posso farti io il trucco? Dei pallini bianchi ti starebbero benissimo"
+    ],
+    "alt": [
+      "Il Lato Rosa della Forza è la via per molte abilità da alcuni ritenute... innaturali.",
+      "Dovresti aggiungere un pò di colore al tuo outfit, è cosi banale",
+      "Se porto le mutande sotto a questo costume? Ovviamente no"
+    ]
+  },
+  "Lore": {
+    "original": [
+      "Tifo Samp: non ho bisogno di vincere per soffrire, ci penso io",
+      "Lo scudetto del ‘91 l’ho visto solo nei video. Il mio dolore è più vintage",
+      "Al concerto ho cantato tutti i pezzi, tranne quelli che non ricordo. Come il gol della Samp"
+    ],
+    "alt": [
+      "Ho girato il corteo con il drone. Il video è perfetto, la cassa integrazione un po’ meno",
+      "Montaggio in 4K della vertenza. Se il padrone non lo guarda, almeno lo guarda l’algoritmo",
+      "Ho un megafono, una telecamera e tre cause in corso. Non chiedermi cosa faccio nel tempo libero"
+    ]
+  },
+  "_nemici": {
+    "OCCASIONALE": [
+      "Vengo ai concerti una volta l’anno, ma il ritornello lo so cantare tutto",
+      "Ho preso il biglietto per il primo tempo. Il bis lo guardo su Instagram",
+      "Non sono un fan, sono qui per la birra e il selfie"
+    ],
+    "MAINSTREAMER": [
+      "Se non è in classifica non esiste, scusa tanto",
+      "Ho ascoltato il disco tre volte, ormai lo canto come se fosse mio",
+      "Il rock vero? Quello che passa in radio alle sette di mattina"
+    ],
+    "POSER": [
+      "Foto prima, musica dopo. Il concerto è una location",
+      "Il look è quello giusto, manca solo il gruppo che lo sa suonare",
+      "Ti piace il mio stile? Ci ho messo tre ore e due parrucchieri"
+    ],
+    "BOLOGNESEEEEE": [
+      "A Bologna il concerto inizia alle undici e finisce quando dico io",
+      "Sotto i portici si suona meglio, lo dico da sempre",
+      "Ho la maglia gialla, il cappello e la sindrome dell’ultimo tram"
+    ],
+    "METALLARO": [
+      "Il volume non è mai abbastanza. Lo so, lo dicono tutti",
+      "Ho sentito il primo disco nel 1987 e non mi sono più ripreso",
+      "Ti vedo sorridere. È un crimine nei confronti del metal"
+    ],
+    "PROLETARIO VERO": [
+      "Il biglietto costa come una bolletta, ma la musica è di tutti",
+      "Io il concerto l’ho visto dal balcone del mio amico",
+      "Ci hanno detto che il rock è morto. Il rock lavora ancora alla mensa"
+    ],
+    "MAX PEZZALI": [
+      "Hanno ucciso l'Uomo Ragno. Io invece ho appena fatto fuori la tua playlist",
+      "Nord, sud, ovest, est: girala come vuoi, alla fine il ritornello lo sai",
+      "Sei un mito? Come mai allora hai paura di uno che canta dagli anni Novanta?"
+    ]
+  },
+  "Lou Reed": {
+    "original": [
+      "Se vuoi un idolo, prova al negozio di souvenir.",
+      "Una giacca di pelle non è un manifesto politico.",
+      "Non sono qui per insegnarti niente. Ma possiamo divertirci."
+    ]
+  }
+}

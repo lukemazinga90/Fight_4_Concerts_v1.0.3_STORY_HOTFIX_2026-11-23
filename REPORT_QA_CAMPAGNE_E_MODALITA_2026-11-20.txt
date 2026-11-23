@@ -1,0 +1,116 @@
+FIGHT 4 CONCERTS - v1.0.1 - VERIFICA CAMPAGNE E MODALITA
+Data: 20 novembre 2026
+Oggetto: audit locale prima del prossimo deploy (nessuna pubblicazione effettuata)
+
+SORGENTE VERIFICATA
+- Directory: /mnt/data/f4c_v101_staging
+- index.html MD5: f5188aef7289e55c9b86364bf3f4397a
+- ZIP snapshot precedente: /mnt/data/F4C_v101_staging_checkpoint_2026-11-20.zip
+- Test eseguiti in Chromium headless. Le immagini sono servite dal filesystem attraverso
+  intercettazione delle richieste per evitare le restrizioni dei domini locali.
+- I risultati di incontri completi sono SIMULATI impostando una vittoria nel motore,
+  senza simulare in tempo reale tutti i 119 combattimenti.
+
+RISULTATI NUMERICI
+- Controlli logici e di navigazione: 96/96 passati.
+- Campagne simulate: 15/15, per complessivi 119 incontri percorsi.
+- Combattimenti di prova caricati con sprite reali: 9/9.
+- Test salvataggio/continuazione con localStorage simulato: 6/6.
+- PNG validati e leggibili: 1736 frame + 142 asset = 1878.
+- PNG corrotti/non leggibili: 0. PNG completamente vuoti: 0.
+- Errori JavaScript nelle prove: 0; risorse mancanti durante i test: 0.
+
+CAMPAGNE VERIFICATE (il test attraversa prologo, mappa, incontri,
+scene post-vittoria, boss, finale e sblocco quando previsto)
+- [00] Guidotti: 8 incontri, 7o: Vasco Brondi, ultimo: MAX PEZZALI, 16 scene percorse, errori: 0.
+- [01] Giannini: 8 incontri, 7o: Kurt Cobain, ultimo: MAX PEZZALI, 17 scene percorse, errori: 0.
+- [02] Vitto C: 8 incontri, 7o: Filippo Conti, ultimo: MAX PEZZALI, 20 scene percorse, errori: 0.
+- [03] Vitto P: 8 incontri, 7o: Faccianuvola, ultimo: MAX PEZZALI, 17 scene percorse, errori: 0.
+- [04] Lore: 8 incontri, 7o: Fabrizio De Andre, ultimo: MAX PEZZALI, 17 scene percorse, errori: 0.
+- [05] Frillo: 8 incontri, 7o: Piero Pelu, ultimo: MAX PEZZALI, 15 scene percorse, errori: 0.
+- [06] Luke: 7 incontri, 7o: MAX PEZZALI, ultimo: MAX PEZZALI, 0 scene percorse, errori: 0.
+- [07] Rettori: 8 incontri, 7o: MATTIA SGRECCIA, ultimo: MAX PEZZALI, 19 scene percorse, errori: 0.
+- [08] Vasco Brondi: 8 incontri, 7o: Guidotti, ultimo: MAX PEZZALI, 15 scene percorse, errori: 0.
+- [09] Kurt Cobain: 8 incontri, 7o: Giannini, ultimo: MAX PEZZALI, 17 scene percorse, errori: 0.
+- [10] Filippo Conti: 8 incontri, 7o: Vitto C, ultimo: MAX PEZZALI, 16 scene percorse, errori: 0.
+- [11] Faccianuvola: 8 incontri, 7o: Vitto P, ultimo: MAX PEZZALI, 16 scene percorse, errori: 0.
+- [12] Fabrizio De Andre: 8 incontri, 7o: Lore, ultimo: MAX PEZZALI, 15 scene percorse, errori: 0.
+- [13] Piero Pelu: 8 incontri, 7o: Frillo, ultimo: MAX PEZZALI, 14 scene percorse, errori: 0.
+- [14] Donatella Rettore: 8 incontri, 7o: MAX PEZZALI, ultimo: MATTIA SGRECCIA, 14 scene percorse, errori: 0.
+
+NUOVE MODALITA
+- FESTIVAL SPRINT: 3 combattimenti casuali; nuovi avversari comprendono anche
+  giocabili sbloccati; stage scelti casualmente; completamento/rientro al menu validati.
+- ULTIMO POGO: fino a 14 avversari tutti differenti nella singola run;
+  non include il giocatore tra i possibili rivali; HP conservati tra incontri;
+  completamento e schermata finale verificati. Campionati 80 sorteggi per modalita.
+- SOUNDCHECK: scelta del giocatore, dell'avversario e dello stage;
+  dummy senza IA, ritorno alla posizione di partenza e HP ripristinati;
+  colpi verificabili senza terminare la sessione.
+- PAUSA/COMANDI: menu consultabile anche dal combattimento e da Soundcheck;
+  ripresa corretta senza perdere lo stato.
+- VS: ingresso dal menu verificato; il normale motore VS è stato esercitato
+  anche attraverso le prove con i rivali.
+
+SALVATAGGI
+- Continuazione campagna Rettori (passaggio alla tappa Mattia) verificata.
+- Donatella sbloccata e riconosciuta dopo ricaricamento dello stato simulato.
+- Entrare in Festival Sprint non sovrascrive il save della campagna.
+- Ripresa della campagna Donatella alla battaglia 8 contro Mattia verificata.
+- Il test usa uno storage simulato nel browser di prova: conferma la logica
+  ma NON sostituisce un test di persistenza su origine Netlify reale.
+
+TOUCH/MOBILE EMULATO
+- In orizzontale (viewport 844x390) il gioco disegna joystick e pulsanti;
+  pulsanti ad altezza 72px dal bordo inferiore, joystick a 18px.
+- In verticale compare il messaggio di rotazione e i controlli scompaiono.
+- Nessuno scroll della pagina nel viewport di prova; CSS touch-action:none.
+- Non è stato misurato il badge Netlify nella sua UI reale, né sono stati testati
+  doppio tap/pinch su iPhone e Android fisici.
+
+DIFETTI DA RISOLVERE PRIMA DEL DEPLOY - PRIORITA ALTA
+[A] Sei asset narrativi Giannini/Cobain incorporano una vecchia schermata
+    'Pubblicazione incompleta' invece dell'illustrazione desiderata:
+    - assets/C_giannini_prologue16.png
+    - assets/C_giannini_mid16.png
+    - assets/C_giannini_duel16.png
+    - assets/C_giannini_tokyo16.png
+    - assets/C_cobain_prologue16.png
+    - assets/C_cobain_rest16.png
+    Sono file PNG validi, quindi il controllo di esistenza non poteva rilevarli.
+    Il difetto compare in gioco nei relativi prologhi, midpoint e finali.
+[B] Rettori nel combattimento usa ancora `frames/Rettori/*.png` con gonna chiara.
+    NON corrisponde allo spritesheet Rettori approvato dall'utente, che ha
+    camicia a righe rosse e pantaloncini. Va sostituito/ricontrollato per tutti
+    i frame 000-055 con la procedura ufficiale, senza danneggiare il moveset.
+
+RIFINITURE GRAFICHE POSSIBILI - PRIORITA MEDIA
+- C_vittoc_prologue16.png e C_conti_festival16.png sono montaggi/catture
+  di schermate, non fondali narrativi isolati: valutare una revisione estetica.
+- Il set Donatella contiene tre pose sorgente riutilizzate: in futuro si possono
+  rifinire le transizioni, senza bloccare la struttura della campagna.
+
+LIMITI DEL COLLAUDO
+- Non eseguito il playthrough umano di tutti i 119 combattimenti a velocita reale:
+  le transizioni, gli script e gli sblocchi sono testati con vittorie simulate.
+- Nove prove di arena con sprite effettivi, non una revisione artistica di
+  tutti i frame in movimento o del bilanciamento dell'IA.
+- Nessun controllo sul badge Netlify o sul comportamento dei telefoni fisici.
+- Non sono state effettuate correzioni al codice o alle immagini.
+- Nessuno ZIP aggiornato del gioco e nessun deploy Netlify effettuato.
+
+GIUDIZIO
+FUNZIONALITA CAMPAGNE/MODALITA: test automatici positivi.
+GRAFICA: NON release-ready, due difetti ad alta priorita identificati.
+Prossima patch: risolvere prima i sei PNG Giannini/Cobain e il costume
+Rettori; poi breve regression test e deploy unico.
+
+ALLEGATI QA (FUORI DALLA CARTELLA DI GIOCO)
+/mnt/data/F4C_QA_COMPLETO_2026-11-20/qa_runtime_results.json
+/mnt/data/F4C_QA_COMPLETO_2026-11-20/combat_runtime.json
+/mnt/data/F4C_QA_COMPLETO_2026-11-20/persistence.json
+/mnt/data/F4C_QA_COMPLETO_2026-11-20/mobile.json
+/mnt/data/F4C_QA_COMPLETO_2026-11-20/images_integrity.json
+/mnt/data/F4C_QA_COMPLETO_2026-11-20/prologues_contact.jpg
+/mnt/data/F4C_QA_COMPLETO_2026-11-20/combats_contact.jpg
+/mnt/data/F4C_QA_COMPLETO_2026-11-20/difetti_grafici.png

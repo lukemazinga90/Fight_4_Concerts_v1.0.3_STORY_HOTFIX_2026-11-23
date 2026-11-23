@@ -1,0 +1,18 @@
+FIGHT 4 CONCERTS - CHECKPOINT LOCALE v1.0.1 NORMALIZZATO
+Data: 2026-11-20
+Scopo: archivio riproducibile della copia staging dopo la normalizzazione scala/baseline.
+STATO: NON PUBBLICATO SU NETLIFY; NON DICHIARATO RELEASE-READY.
+Canvas 768x432 / logico 384x216; GROUND=186, SPR_H=96 (riferimento non cella fissa).
+Guidotti benchmark; Piero, Mattia, Vasco, Donatella corretti tramite metadati.
+31 sets x56 PNG =1736 frame, assets extra=142, PNG totali=1878.
+JS index SHA256: 39ad53fd0a60ffe40dad1cd67b66c6828c1a64da7c72e77dd482d234f7f1be7b
+PNG nel codice mancanti: 0.
+Test di regressione simulati: 589/589, pageerrors=0, richieste asset mancanti=0.
+Immagini narrative Giannini/Cobain con vecchia schermata di errore: da rifare (6).
+Costume Rettori in gioco non identico allo sheet approvato: da correggere.
+Collaudo smartphone reale non ancora eseguito.
+
+Documenti guida: STANDARD_SCALA_BASELINE_ROSTER.txt, PROCEDURA_SPRITE_56_FRAME.txt,
+REPORT_QA_NORMALIZZAZIONE_ROSTER_2026-11-20.txt, AUDIT_31_SCALA_BASELINE.csv.
+Gli art sorgente in asset_proposte non usati in runtime sono lasciati nella cartella staging
+ma non duplicati in questo ZIP per contenere il peso.

@@ -1,0 +1,20 @@
+{
+  "purpose": "Ripristino dei quattro frame della speciale approvati dall’utente; nessuna altra posa modificata",
+  "modified": [
+    "frames/MattiaSgreccia/051.png",
+    "frames/MattiaSgreccia/052.png",
+    "frames/MattiaSgreccia/053.png",
+    "frames/MattiaSgreccia/054.png"
+  ],
+  "untouched_frame_hashes_matched": 52,
+  "sources": [
+    "a_clean_pixel_art_sprite_on_a_transparent_backgrou_1_batch_1.png",
+    "a_crisp_detailed_pixel_art_sprite_in_the_exact_st_2_batch_2.png",
+    "a_detailed_high_resolution_pixel_art_sprite_tran_3_batch_3.png",
+    "a_detailed_high_quality_pixel_art_sprite_with_tra_4_batch_4.png"
+  ],
+  "canvas": "230x190 px; RGBA; piedi su y=178",
+  "metadata": "index.html invariato: size[230,190], anchor[105,177] per i frame 051–054; render scale=0.61",
+  "checks": "PNG caricano con PIL; nessuna posizione alterata per gli altri 52 frame",
+  "note": "I precedenti problemi grafici delle altre campagne restano da correggere."
+}

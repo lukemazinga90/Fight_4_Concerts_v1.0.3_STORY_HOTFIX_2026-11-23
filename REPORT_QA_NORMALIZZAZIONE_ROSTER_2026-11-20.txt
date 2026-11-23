@@ -1,0 +1,50 @@
+FIGHT 4 CONCERTS — QA NORMALIZZAZIONE SCALA / BASELINE
+Data: 20 novembre 2026. Stato: checkpoint locale, nessun deploy Netlify.
+
+ESITO: NORMALIZZAZIONE TECNICA COMPLETATA, MA NON ANCORA RELEASE-READY.
+
+Benchmark Guidotti: altezza 93.00 px logici; piedi Y 186 (delta 0).
+
+PRIMA / DOPO (frame neutro 000):
+- PieroPelu: altezza 92.86 -> 99.82 px, piedi +0.00 -> +0.00 px (delta dalla ground line).
+- MattiaSgreccia: altezza 95.41 -> 87.5 px, piedi +6.13 -> +0.62 px (delta dalla ground line).
+- VascoBrondi: altezza 83.12 -> 91.52 px, piedi -4.65 -> +0.00 px (delta dalla ground line).
+- DonatellaRettore: altezza 87.87 -> 91.64 px, piedi +0.00 -> +0.00 px (delta dalla ground line).
+- Guidotti: altezza 93.00 -> 93.0 px, piedi +0.00 -> +0.00 px (delta dalla ground line).
+
+SISTEMA
+- Codice: modificati RENDER_PROFILE e FRAME_FILES solo per i set corretti.
+- frameFor: idle usa 000..002; evita l'inclusione di 003 spesso corrispondente alla corsa.
+- 56 immagini individuali di ogni personaggio NON RIDISEGNATE in questa patch.
+- Recuperata cartella assets/ e frames/ dal checkpoint precedente senza sovrascrivere l'HTML aggiornato.
+- Recuperato dialoghi_p3.json che mancava nella cartella di lavoro.
+
+AUDIT ROSTER
+- 31 set; 56 frame per set; 1736 frame.
+- 1878 PNG complessivi validi, nessun PNG vuoto.
+- Tutti i 31 frame 000 con delta ground entro 1.5 px.
+- 310 verifiche su pose chiave (10 indici per set), con delta in CSV.
+- Non impone altezza identica ai diversi personaggi: Max e personaggi più bassi
+  mantengono differenze stilistiche; sono corrette le anomalie evidenti.
+
+QA BROWSER
+- Confronto PRIMA/DOPO in vera arena: Piero, Mattia, Vasco, Donatella vs Guidotti.
+- Speciale Mattia: 051..055 visualizzata in arena, eye effect presente e allineato.
+- Regressione simulata delle 15 rotte campagna, sblocchi e modalità:
+  589 verifiche superate su 589, zero errori JS, zero richieste file mancanti.
+- Festival Sprint 3 round random; Ultimo Pogo 14 avversari unici;
+  Soundcheck stage/nemico scelti, avversario fermo, ripristino HP;
+  Comandi accessibile in pausa e ripresa testata.
+- Le verifiche di progressione usano simulazione dei risultati, NON equivalgono
+  a completare 15 campagne con input fisici e gameplay continuo.
+- Smartphone fisico, notch, gesture OS e badge Netlify NON TESTATI.
+
+APERTI PRIMA DELLA RELEASE (VISIVI, NON DI SCALA)
+1. Sei immagini 16-bit Giannini/Cobain con screenshot "Pubblicazione incompleta" incorporato.
+2. Rettori usa ancora costume con gonna e non quello con righe/shorts approvato.
+3. Verificare eventuali pose dei rivali recuperati dai fogli originali in combattimento dinamico.
+
+ARCHIVIAZIONE
+- File di lavoro: f4c_v101_staging/index.html e cartelle assets/frames/.
+- Codice precedente salvato separatamente come F4C_index_PRE_normalizzazione_2026-11-20.html.
+- Nuovo checkpoint ZIP completo, non pubblicato.

@@ -1,0 +1,445 @@
+{
+  "version": "1.0",
+  "build_source": "Fight 4 Concerts v1.0.1 – 2026-11-20",
+  "screen_size": [
+    384,
+    216
+  ],
+  "counts": {
+    "Luke": 18,
+    "LouReed": 18
+  },
+  "scene_art_policy": "8 unique 16:9 key illustrations reused across 36 narrative screens; subtitles rendered by engine.",
+  "placement": {
+    "prologue": [
+      1
+    ],
+    "after_bouts_1_to_6": [
+      2,
+      3,
+      4,
+      6,
+      7,
+      8
+    ],
+    "mid3": [
+      5
+    ],
+    "pre_rival": [
+      9,
+      10,
+      11
+    ],
+    "after_rival": [
+      12,
+      13,
+      14
+    ],
+    "finale": [
+      15,
+      16,
+      17,
+      18
+    ]
+  },
+  "Luke": [
+    {
+      "event": "prologue",
+      "kind": "prologue",
+      "title": "IL BAMBINO E IL DISCO",
+      "text": "Da bambino Luke non capiva perché quella copertina lo incantasse. Sapeva solo che quell'uomo sembrava libero.",
+      "art": "luke_child",
+      "emotion": "fascinazione",
+      "id": "luke_01",
+      "index": 1,
+      "from": "NARRATORE"
+    },
+    {
+      "event": "after1",
+      "kind": "after",
+      "title": "IL TRIBUNALE DEL ROSA",
+      "text": "Un cappello rosa dovrebbe offendere la mascolinità? Allora oggi il ministero dell'uomo ha perso una causa.",
+      "art": "luke_judgment",
+      "emotion": "sicurezza ostentata",
+      "id": "luke_02",
+      "index": 2,
+      "from": "LUKE"
+    },
+    {
+      "event": "after2",
+      "kind": "after",
+      "title": "IL MANUALE DELL UOMO",
+      "text": "Gli ho dimostrato che sono forte. Aspetta... perché avevo così bisogno di dimostrarglielo?",
+      "art": "luke_judgment",
+      "emotion": "primo dubbio",
+      "id": "luke_03",
+      "index": 3,
+      "from": "LUKE"
+    },
+    {
+      "event": "after3",
+      "kind": "after",
+      "title": "DIVERSO, MA NEL MODO GIUSTO",
+      "text": "Prima dovevo sembrare un uomo vero; ora un ribelle vero. Ma chi cazzo dà i voti?",
+      "art": "luke_reflection",
+      "emotion": "frustrazione",
+      "id": "luke_04",
+      "index": 4,
+      "from": "LUKE"
+    },
+    {
+      "event": "mid3",
+      "kind": "message",
+      "title": "IL RIFLESSO",
+      "text": "Nella vetrina vede il cappello rosa e ricorda un vecchio disco. Una volta gli sembrava tutto più semplice.",
+      "art": "luke_reflection",
+      "emotion": "nostalgia inattesa",
+      "id": "luke_05",
+      "index": 5,
+      "from": "LUKE"
+    },
+    {
+      "event": "after4",
+      "kind": "after",
+      "title": "ERA SOLO UNA BATTUTA",
+      "text": "Scherzare è lecito. Ma perché lascio che il giudizio di uno sconosciuto decida come devo sentirmi?",
+      "art": "luke_judgment",
+      "emotion": "rabbia e stanchezza",
+      "id": "luke_06",
+      "index": 6,
+      "from": "LUKE"
+    },
+    {
+      "event": "after5",
+      "kind": "after",
+      "title": "IL DIRITTO DI ESSERE FRAGILE",
+      "text": "Dico di voler essere libero, ma mi obbligo a essere invincibile. E se avessi semplicemente voglia di pace?",
+      "art": "luke_record",
+      "emotion": "vulnerabilità",
+      "id": "luke_07",
+      "index": 7,
+      "from": "LUKE"
+    },
+    {
+      "event": "after6",
+      "kind": "after",
+      "title": "LE BATTAGLIE CHE CONTANO",
+      "text": "Combattere le ingiustizie conta. Ma non ogni provocazione deve diventare un processo alla mia identità.",
+      "art": "luke_record",
+      "emotion": "consapevolezza",
+      "id": "luke_08",
+      "index": 8,
+      "from": "LUKE"
+    },
+    {
+      "event": "pre7a",
+      "kind": "shadow",
+      "title": "ROCK N ROLL ANIMAL",
+      "text": "Ritrova il vinile. Da bambino non sapeva chi fosse quell'uomo, ma aveva visto una possibilità diversa.",
+      "art": "luke_record",
+      "emotion": "riconoscimento",
+      "id": "luke_09",
+      "index": 9,
+      "from": "LUKE"
+    },
+    {
+      "event": "pre7b",
+      "kind": "rival",
+      "title": "IL CONCERTO SEGRETO",
+      "text": "LOU: Sei venuto per chiedermi il permesso di essere te stesso? LUKE: No. E non lo chiederò mai.",
+      "art": "lou_encounter",
+      "emotion": "incontro",
+      "id": "luke_10",
+      "index": 10,
+      "from": "LOU REED"
+    },
+    {
+      "event": "pre7c",
+      "kind": "rival",
+      "title": "RIVAL BATTLE",
+      "text": "LOU: Allora perché non mi fai vedere cosa sai fare? LUKE: Cazzo, sì. Ne ho proprio voglia.",
+      "art": "lou_encounter",
+      "emotion": "scelta volontaria",
+      "id": "luke_11",
+      "index": 11,
+      "from": "LUKE E LOU"
+    },
+    {
+      "event": "after7a",
+      "kind": "after",
+      "title": "DOPO LA BATTAGLIA",
+      "text": "LUKE: Ti ho battuto. Perché non mi sento diverso? LOU: Forse non avevi bisogno di cambiare.",
+      "art": "lou_encounter",
+      "emotion": "rivelazione",
+      "id": "luke_12",
+      "index": 12,
+      "from": "LUKE"
+    },
+    {
+      "event": "after7b",
+      "kind": "after",
+      "title": "ERA LA TUA STRADA",
+      "text": "Puoi combattere il pregiudizio senza dover dimostrare ogni giorno che meriti di esistere.",
+      "art": "lou_encounter",
+      "emotion": "liberazione",
+      "id": "luke_13",
+      "index": 13,
+      "from": "LOU REED"
+    },
+    {
+      "event": "after7c",
+      "kind": "after",
+      "title": "BEL CAPPELLO",
+      "text": "LOU: Comunque bel cappello. LUKE: Grazie. Ma con quella giacca di pelle a luglio come cazzo fai?",
+      "art": "lou_encounter",
+      "emotion": "leggerezza",
+      "id": "luke_14",
+      "index": 14,
+      "from": "LUKE E LOU"
+    },
+    {
+      "event": "end1",
+      "kind": "after",
+      "title": "DOPO MAX PEZZALI",
+      "text": "Se una canzone mi piace, l'ascolto. Non chiederò l'autorizzazione al tribunale del buon gusto.",
+      "art": "luke_judgment",
+      "emotion": "autonomia",
+      "id": "luke_15",
+      "index": 15,
+      "from": "LUKE"
+    },
+    {
+      "event": "end2",
+      "kind": "after",
+      "title": "LIBERO DI SCEGLIERE",
+      "text": "Non devo fare sempre il contrario degli altri. Devo poter scegliere quello che desidero.",
+      "art": "lou_epilogue",
+      "emotion": "libertà",
+      "id": "luke_16",
+      "index": 16,
+      "from": "LUKE"
+    },
+    {
+      "event": "end3",
+      "kind": "after",
+      "title": "IL BAMBINO AVEVA CAPITO",
+      "text": "Quel bambino non stava cercando una definizione. Gli piaceva soltanto quello che vedeva.",
+      "art": "luke_child",
+      "emotion": "circolarità",
+      "id": "luke_17",
+      "index": 17,
+      "from": "NARRATORE"
+    },
+    {
+      "event": "end4",
+      "kind": "finale",
+      "title": "WALK ON THE WILD SIDE",
+      "text": "E comunque questo cappello è una bomba. THE END.",
+      "art": "lou_epilogue",
+      "emotion": "gioia",
+      "id": "luke_18",
+      "index": 18,
+      "from": "LUKE"
+    }
+  ],
+  "LouReed": [
+    {
+      "event": "prologue",
+      "kind": "prologue",
+      "title": "IL PESO DI UNA LEGGENDA",
+      "text": "Prima volevano censurarlo; ora vendono sette regole per vivere senza regole. Lou ha un pessimo presentimento.",
+      "art": "lou_prologue",
+      "emotion": "cinismo",
+      "id": "loureed_01",
+      "index": 1,
+      "from": "LOU REED"
+    },
+    {
+      "event": "after1",
+      "kind": "after",
+      "title": "IL SELFIE CON IL MITO",
+      "text": "Non conosce le canzoni, ma pretende una faccia più maledetta. La mia faccia normale non andrebbe bene?",
+      "art": "lou_prologue",
+      "emotion": "fastidio",
+      "id": "loureed_02",
+      "index": 2,
+      "from": "LOU REED"
+    },
+    {
+      "event": "after2",
+      "kind": "after",
+      "title": "LA RIBELLIONE ACCESSIBILE",
+      "text": "Vogliono vendere la trasgressione senza disturbare nessuno. È un affare: posso perfino non essere presente.",
+      "art": "lou_manual",
+      "emotion": "disillusione",
+      "id": "loureed_03",
+      "index": 3,
+      "from": "LOU REED"
+    },
+    {
+      "event": "after3",
+      "kind": "after",
+      "title": "VESTIRSI COME LOU REED",
+      "text": "Dice di non seguire nessuno, ma si è vestito esattamente come me. Forse dovrei dargli il numero del sarto.",
+      "art": "lou_manual",
+      "emotion": "perplessità",
+      "id": "loureed_04",
+      "index": 4,
+      "from": "LOU REED"
+    },
+    {
+      "event": "mid3",
+      "kind": "message",
+      "title": "IL MANUALE DELLA LIBERTÀ",
+      "text": "Come essere un vero anticonformista: dieci lezioni ispirate a me. Una regola vieta di seguire regole.",
+      "art": "lou_manual",
+      "emotion": "paradosso",
+      "id": "loureed_05",
+      "index": 5,
+      "from": "LOU REED"
+    },
+    {
+      "event": "after4",
+      "kind": "after",
+      "title": "IL DOVERE DI SCANDALIZZARE",
+      "text": "Prima si offendevano se ero trasgressivo. Adesso si offendono se faccio colazione come una persona normale.",
+      "art": "lou_prologue",
+      "emotion": "irritazione",
+      "id": "loureed_06",
+      "index": 6,
+      "from": "LOU REED"
+    },
+    {
+      "event": "after5",
+      "kind": "after",
+      "title": "LE CANZONI FRAGILI",
+      "text": "Ho cantato dolore, desiderio e solitudine. Loro hanno deciso che ero un uomo che non provava niente.",
+      "art": "lou_prologue",
+      "emotion": "malinconia",
+      "id": "loureed_07",
+      "index": 7,
+      "from": "LOU REED"
+    },
+    {
+      "event": "after6",
+      "kind": "after",
+      "title": "NESSUNA RISPOSTA UNIVERSALE",
+      "text": "Non tutti hanno la stessa libertà di scelta. Ma una canzone non deve essere la risposta all'intero mondo.",
+      "art": "lou_manual",
+      "emotion": "accettazione dei limiti",
+      "id": "loureed_08",
+      "index": 8,
+      "from": "LOU REED"
+    },
+    {
+      "event": "pre7a",
+      "kind": "shadow",
+      "title": "NESSUNA LISTA, NESSUN EROE",
+      "text": "Lou organizza un concerto segreto. Niente celebrazioni, niente idoli. Solo chi ha voglia di esserci.",
+      "art": "lou_epilogue",
+      "emotion": "curiosità",
+      "id": "loureed_09",
+      "index": 9,
+      "from": "LOU REED"
+    },
+    {
+      "event": "pre7b",
+      "kind": "rival",
+      "title": "IL RAGAZZO IN ROSA",
+      "text": "Entra un ragazzo col cappello rosa e la maglia colorata. Almeno questo non si è vestito come me.",
+      "art": "lou_encounter",
+      "emotion": "sorpresa",
+      "id": "loureed_10",
+      "index": 10,
+      "from": "LOU REED"
+    },
+    {
+      "event": "pre7c",
+      "kind": "rival",
+      "title": "RIVAL BATTLE",
+      "text": "LUKE: Ti guardavo da bambino senza capire perché. LOU: E ora? LUKE: Ho capito che potevo essere me stesso.",
+      "art": "lou_encounter",
+      "emotion": "riconoscimento",
+      "id": "loureed_11",
+      "index": 11,
+      "from": "LUKE E LOU"
+    },
+    {
+      "event": "after7a",
+      "kind": "after",
+      "title": "DOPO LO SCONTRO",
+      "text": "LUKE: Non voglio diventare come te. LOU: Mi sembra evidente dal cappello.",
+      "art": "lou_encounter",
+      "emotion": "complicità",
+      "id": "loureed_12",
+      "index": 12,
+      "from": "LOU REED"
+    },
+    {
+      "event": "after7b",
+      "kind": "after",
+      "title": "UNA COPERTINA, NON UNA LEGGE",
+      "text": "Quella fotografia era una possibilità, non un comandamento. Il ragazzo lo ha capito da solo.",
+      "art": "lou_manual",
+      "emotion": "chiarezza",
+      "id": "loureed_13",
+      "index": 13,
+      "from": "LOU REED"
+    },
+    {
+      "event": "after7c",
+      "kind": "after",
+      "title": "NESSUN MODELLO DA SEGUIRE",
+      "text": "Non devo essere la risposta per gli altri. È già abbastanza se qualcuno trova il coraggio di scegliere.",
+      "art": "lou_encounter",
+      "emotion": "sollievo",
+      "id": "loureed_14",
+      "index": 14,
+      "from": "LOU REED"
+    },
+    {
+      "event": "end1",
+      "kind": "after",
+      "title": "DOPO MAX PEZZALI",
+      "text": "MAX: Perché vuoi ancora suonare? LOU: Perché mi stavo divertendo, Max. Non c'è altro da dimostrare.",
+      "art": "lou_epilogue",
+      "emotion": "serenità",
+      "id": "loureed_15",
+      "index": 15,
+      "from": "LOU REED"
+    },
+    {
+      "event": "end2",
+      "kind": "after",
+      "title": "LA LEGGENDA SUL VINILE",
+      "text": "Chi vuole il vecchio Lou può trovare i dischi. Io posso continuare a vivere, senza restare intrappolato lì.",
+      "art": "lou_prologue",
+      "emotion": "distacco dal mito",
+      "id": "loureed_16",
+      "index": 16,
+      "from": "LOU REED"
+    },
+    {
+      "event": "end3",
+      "kind": "after",
+      "title": "LA MUSICA RESTA",
+      "text": "Un simbolo non deve decidere che cosa diventeranno gli altri. E gli altri non decidono chi è Lou.",
+      "art": "lou_epilogue",
+      "emotion": "reciprocità",
+      "id": "loureed_17",
+      "index": 17,
+      "from": "NARRATORE"
+    },
+    {
+      "event": "end4",
+      "kind": "finale",
+      "title": "NO MORE HEROES",
+      "text": "LUKE: Lou, serve una maglia più colorata! LOU: Cristo santo, quel ragazzo. THE END.",
+      "art": "lou_epilogue",
+      "emotion": "ironia e libertà",
+      "id": "loureed_18",
+      "index": 18,
+      "from": "LOU REED"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "Rettori": {
+    "count": 56,
+    "nonempty": true,
+    "first_size": [
+      133,
+      188
+    ]
+  },
+  "DonatellaRettore": {
+    "count": 56,
+    "nonempty": true,
+    "first_size": [
+      133,
+      188
+    ]
+  },
+  "MattiaSgreccia": {
+    "count": 56,
+    "nonempty": true,
+    "first_size": [
+      181,
+      155
+    ]
+  },
+  "Mattia000_050_identical_sha256_to_approved": true,
+  "Donatella_pose_alpha_exact": true,
+  "body_matte_modes": "story scenes with in-game canvas and dynamic text",
+  "routes": {
+    "Rettori": [
+      "6 scontri originali",
+      "Mattia settimo (sblocco Donatella)",
+      "Max ottavo"
+    ],
+    "Donatella": [
+      "6 scontri originali",
+      "Max settimo",
+      "Mattia ottavo"
+    ]
+  },
+  "tested": [
+    "Browser runtime test 15-character roster",
+    "7 scene cases",
+    "2 real fight render cases",
+    "boss special 053",
+    "seventh-win unlock",
+    "0 page errors",
+    "0 missing image requests",
+    "JS syntax node --check"
+  ],
+  "not_tested": [
+    "full 8-fight human gameplay",
+    "smartphone iPhone/Android real",
+    "full 56-pose animation timing by manual play",
+    "portrait of previous rivals may be source-reconstructed, requires visual comparison"
+  ]
+}

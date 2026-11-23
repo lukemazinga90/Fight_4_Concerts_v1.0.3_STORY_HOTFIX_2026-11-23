@@ -1,0 +1,92 @@
+FIGHT 4 CONCERTS — REPORT CONFRONTO MATTIA SGRECCIA vs RETTORI
+================================================================
+Versione: 1.0 — 2026-11-20
+Riferimento base: MAPPATURA_RETTORI_56_VISIVA.txt
+Sorgente Mattia controllata: /mnt/data/mattia_sgreccia_pixel_arcade_fighter_spritesheet.png
+Metodo: estrazione 8x7 del foglio più recente di Mattia in working_mattia_latest_sheet_extracted/000..055
+Criterio: stesso indice = stessa tipologia di posa del foglio Rettori approvato.
+
+LEGENDA
+OK   = stessa tipologia di posa
+QA   = abbastanza vicina ma da rifinire manualmente
+REDO = tipologia errata, indice da rifare
+
+ESITO RAPIDO
+- Blocco 000-009: sostanzialmente corretto.
+- Blocco 010-024: NON conforme; Mattia deraglia dalla sequenza push/guardie di Rettori.
+- Blocco 025-037: in gran parte NON conforme; Mattia usa pugni/calci dove Rettori richiede knee/dash basso.
+- Blocco 038-048: NON conforme; Mattia entra troppo presto in hit/KO/vittoria.
+- Blocco 049-055: parzialmente conforme; speciale buono in 051-054, ma 049-050 e 055 non seguono la famiglia Rettori.
+
+VERIFICA INDICE PER INDICE
+000 | OK   | guardia neutra
+001 | OK   | guardia neutra
+002 | OK   | guardia neutra
+003 | OK   | transizione neutra/movimento
+004 | OK   | locomozione
+005 | OK   | locomozione
+006 | OK   | locomozione
+007 | OK   | locomozione/frenata
+008 | OK   | locomozione finale
+009 | OK   | neutra pronta
+010 | REDO | Rettori richiede push in piedi; Mattia scende a terra
+011 | REDO | Rettori richiede estensione push; Mattia mani a terra
+012 | REDO | Rettori richiede push/guardia bassa; Mattia crouch guard
+013 | REDO | Rettori richiede ritorno guardia; Mattia crouch guard
+014 | OK   | guardia neutra
+015 | OK   | guardia neutra
+016 | REDO | Rettori richiede guardia bassa; Mattia resta alto
+017 | REDO | Rettori richiede push basso prep; Mattia non corrisponde
+018 | REDO | Rettori richiede push basso; Mattia salto/ginocchio
+019 | REDO | Rettori richiede push basso; Mattia salto/ginocchio
+020 | REDO | Rettori richiede push basso con blur; Mattia salto/ginocchio
+021 | REDO | Rettori richiede push basso con blur; Mattia salto/ginocchio
+022 | REDO | Rettori richiede guardia bassa ritorno; Mattia calcio aereo
+023 | REDO | Rettori richiede guardia bassa ritorno; Mattia calcio aereo
+024 | REDO | Rettori richiede reset basso; Mattia recovery da calcio
+025 | REDO | Rettori richiede knee raise; Mattia pugno alto prep
+026 | REDO | Rettori richiede knee raise; Mattia pugno alto impatto
+027 | REDO | Rettori richiede reset neutro; Mattia pugno alto ritorno
+028 | REDO | Rettori richiede crouch prep dash; Mattia ginocchiata / alzata gamba
+029 | REDO | Rettori richiede dash basso prep; Mattia alzata gamba / kick prep
+030 | REDO | Rettori richiede dash basso 1; Mattia kick prep/impatto
+031 | REDO | Rettori richiede dash basso 2; Mattia high kick
+032 | REDO | Rettori richiede dash basso recovery; Mattia rientro kick
+033 | QA   | bassa raccolta: Mattia è basso ma non coincide bene
+034 | QA   | affondo basso: Mattia è proiettato avanti ma non equivalente perfetto
+035 | REDO | Rettori richiede impatto basso/recovery; Mattia è già quasi KO orizzontale
+036 | QA   | guardia bassa reset: Mattia basso, ma da rifinire
+037 | REDO | Rettori richiede guardia bassa reset; Mattia hit recoil in piedi
+038 | REDO | Rettori richiede neutra guardia; Mattia hit recoil ampio
+039 | REDO | Rettori richiede hit basso; Mattia hit recoil/fall
+040 | REDO | Rettori richiede hit basso raccolto; Mattia seduto in caduta
+041 | REDO | Rettori richiede salto stacco; Mattia a terra
+042 | REDO | Rettori richiede salto salita; Mattia a terra
+043 | REDO | Rettori richiede attacco aereo; Mattia KO a terra
+044 | REDO | Rettori richiede attacco aereo; Mattia KO a terra
+045 | REDO | Rettori richiede atterraggio/crouch; Mattia vittoria
+046 | REDO | Rettori richiede recupero basso; Mattia vittoria ampia
+047 | REDO | Rettori richiede neutra reset; Mattia vittoria
+048 | QA   | neutra finale: Mattia è ancora in vittoria, non ideale
+049 | REDO | Rettori richiede vittoria 1; Mattia sconfitta/slump
+050 | REDO | Rettori richiede vittoria 2; Mattia sconfitta/slump
+051 | OK   | speciale prep
+052 | OK   | speciale charge
+053 | OK   | speciale charge/rilascio
+054 | OK   | speciale rilascio
+055 | REDO | Rettori richiede fine speciale/ritorno neutro; Mattia resta nel pieno dell'effetto
+
+SINTESI OPERATIVA
+Il foglio Mattia più recente NON è importabile come set compatibile con Rettori.
+I primi 10 frame e la speciale 051-054 sono la parte salvabile.
+Tutto il blocco centrale va ricostruito seguendo ESATTAMENTE la sequenza visiva
+Rettori 010-050. In particolare servono:
+- famiglia push/guardie basse ai frame 010-024;
+- famiglia knee/dash basso/affondi ai frame 025-037;
+- famiglia hit/salto/atterraggio/reset ai frame 038-048;
+- vittoria corretta ai frame 049-050;
+- chiusura speciale/ritorno neutro al frame 055.
+
+DECISIONE
+NON sostituire i frame di gioco correnti di Mattia con questo foglio.
+Usare questo report come checklist per la rigenerazione o correzione mirata.

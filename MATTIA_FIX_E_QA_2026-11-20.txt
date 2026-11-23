@@ -1,0 +1,25 @@
+FIGHT 4 CONCERTS — FIX MATTIA SGRECCIA
+Data: 20 novembre 2026
+
+PROBLEMA RISOLTO
+- Il ritaglio rigido 8×7 tagliava piedi e arti: righe originali con altezze variabili.
+- Il foglio conteneva un alone rosso di sfondo e pezzi di figure vicine.
+- La scala e il punto d'appoggio del boss erano incoerenti con Guidotti.
+
+SOLUZIONE APPLICATA
+- Segmentazione delle 56 figure usando le separazioni reali delle sette righe.
+- Rimozione del fondo rosso e delle parti estranee.
+- 035 ricostruito da una posa equivalente di affondo/dash 031 (sorgente 035 tagliata).
+- 036 ricostruito da una posa equivalente di guardia bassa 033 (sorgente 036 tagliata).
+- 051-054 ricomposti con corpo intero e l'Occhio del Dominio viola/rosso.
+- Canvas 200×190 (230×190 per 051-054), linea piedi y=177.
+- Rendering: scala 0,61, metadati per larghezza/ancoraggio corretti nel solo Mattia.
+- Il motore e tutte le altre 30 serie di PNG rimangono invariati.
+
+NOTE QA
+- I 56 file sono validi RGBA e senza segmenti estranei ai confini della canvas.
+- Due pose si ripetono intenzionalmente per eliminare arti troncati.
+- La corrispondenza con la famiglia di mosse di Rettori è per categoria di movimento.
+- La categoria calcio basso nel motore Rettori condivide frame con pugno basso:
+  questo comportamento preesistente non è stato modificato.
+- Il successivo collaudo su telefono reale rimane raccomandato.

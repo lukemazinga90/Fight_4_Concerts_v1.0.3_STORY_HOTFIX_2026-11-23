@@ -1,0 +1,197 @@
+{
+  "passed": 15,
+  "total": 15,
+  "checks": [
+    {
+      "name": "Original files preserved except index and dialogue file",
+      "ok": true,
+      "detail": "{'changed': ['dialoghi_p3.json', 'index.html'], 'missing': [], 'identical': 1908}"
+    },
+    {
+      "name": "56 Lou sprite PNG numbered 000-055",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "All Lou sprites transparent RGBA",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "All Lou frame canvases match Luke geometry",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "All Lou sprites contain content and transparent background",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "All 8 cutscene assets exactly 384x216",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Both narrative arrays exactly 18 scenes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "No missing cutscene references",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "All 16 complete campaign progressions and baseline screen totals",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Lou renders every fighting action without exception",
+      "ok": true,
+      "detail": "{'ok': True, 'frames': [0, 0, 14, 29, 31, 37, 39, 53, 39, 48]}"
+    },
+    {
+      "name": "Pause/resume from Lou VS fight works",
+      "ok": true,
+      "detail": "{'stopped': True, 'resumed': True}"
+    },
+    {
+      "name": "Lou fully included in Soundcheck and intro/stats",
+      "ok": true,
+      "detail": "{'selected': True, 'style': 'WILD SIDE', 'act': True, 'attack': True}"
+    },
+    {
+      "name": "Landscape mobile emulation shows touch controls",
+      "ok": true,
+      "detail": "{'touch': True, 'blocked': False, 'stick': 'block', 'buttons': 'grid'}"
+    },
+    {
+      "name": "Portrait orientation warns and hides controls",
+      "ok": true,
+      "detail": "{'blocked': True, 'rotate': 'flex', 'stick': 'none'}"
+    },
+    {
+      "name": "No browser JavaScript errors",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "full_campaign_simulated": {
+    "0": {
+      "count": 17,
+      "step": 8,
+      "state": "win",
+      "title": "IL CONCERTO IMPOSSIBILE",
+      "rival": "VASCO BRONDI"
+    },
+    "1": {
+      "count": 18,
+      "step": 8,
+      "state": "win",
+      "title": "LA PERFORMANCE PERFETTA",
+      "rival": "KURT COBAIN"
+    },
+    "2": {
+      "count": 21,
+      "step": 8,
+      "state": "win",
+      "title": "L ULTIMO SLOT",
+      "rival": "FILIPPO CONTI"
+    },
+    "3": {
+      "count": 18,
+      "step": 8,
+      "state": "win",
+      "title": "SHIP QUEST",
+      "rival": "FACCIANUVOLA"
+    },
+    "4": {
+      "count": 18,
+      "step": 8,
+      "state": "win",
+      "title": "L ULTIMO CIAK",
+      "rival": "FABRIZIO DE ANDRE"
+    },
+    "5": {
+      "count": 16,
+      "step": 8,
+      "state": "win",
+      "title": "IL CONCERTO DIETRO CASA",
+      "rival": "PIERO PELU"
+    },
+    "6": {
+      "count": 18,
+      "step": 8,
+      "state": "win",
+      "title": "WALK ON THE WILD SIDE",
+      "rival": "LOU REED"
+    },
+    "7": {
+      "count": 20,
+      "step": 8,
+      "state": "win",
+      "title": "LA RAL DELL ANELLO",
+      "rival": "MATTIA SGRECCIA"
+    },
+    "8": {
+      "count": 16,
+      "step": 8,
+      "state": "win",
+      "title": "IL RITORNO INELUTTABILE",
+      "rival": "GUIDOTTI"
+    },
+    "9": {
+      "count": 18,
+      "step": 8,
+      "state": "win",
+      "title": "L IMPERFEZIONE PERFETTA",
+      "rival": "GIANNINI"
+    },
+    "10": {
+      "count": 17,
+      "step": 8,
+      "state": "win",
+      "title": "IL MAESTRO IN CONSOLLE",
+      "rival": "VITTO C"
+    },
+    "11": {
+      "count": 17,
+      "step": 8,
+      "state": "win",
+      "title": "NON ERA UN SEGNALE",
+      "rival": "VITTO P"
+    },
+    "12": {
+      "count": 16,
+      "step": 8,
+      "state": "win",
+      "title": "IL REGISTA MISTERIOSO",
+      "rival": "LORE"
+    },
+    "13": {
+      "count": 15,
+      "step": 8,
+      "state": "win",
+      "title": "ROCK SENZA FRONTIERE",
+      "rival": "FRILLO"
+    },
+    "14": {
+      "count": 15,
+      "step": 8,
+      "state": "win",
+      "title": "SPLENDIDO SPLENDENTE",
+      "rival": "MATTIA SGRECCIA"
+    },
+    "15": {
+      "count": 18,
+      "step": 8,
+      "state": "win",
+      "title": "NO MORE HEROES",
+      "rival": "LUKE"
+    }
+  },
+  "browser_errors": [],
+  "original_files_identical": 1908
+}

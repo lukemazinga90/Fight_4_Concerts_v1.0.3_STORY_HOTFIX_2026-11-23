@@ -1,0 +1,61 @@
+Donatella Rettore - mappatura finale 000-055 su Rettori (stessa categoria di mossa)
+
+000: Rettori idle                         <- Donatella sorgente S00
+001: Rettori idle                         <- Donatella sorgente S01
+002: Rettori idle                         <- Donatella sorgente S02
+003: Rettori corsa                        <- Donatella sorgente S03
+004: Rettori corsa                        <- Donatella sorgente S04
+005: Rettori corsa                        <- Donatella sorgente S05
+006: Rettori corsa                        <- Donatella sorgente S06
+007: Rettori corsa                        <- Donatella sorgente S07
+008: Rettori corsa                        <- Donatella sorgente S08
+009: Rettori corsa                        <- Donatella sorgente S09
+010: Rettori accovacciata                 <- Donatella sorgente S10
+011: Rettori accovacciata                 <- Donatella sorgente S11
+012: Rettori guardia bassa                <- Donatella sorgente S12 (posa riusata)
+013: Rettori guardia in salita            <- Donatella sorgente S13
+014: Rettori guardia alta                 <- Donatella sorgente S14
+015: Rettori guardia alta                 <- Donatella sorgente S15
+016: Rettori guardia bassa                <- Donatella sorgente S12 (posa riusata)
+017: Rettori salto preparazione           <- Donatella sorgente S16
+018: Rettori salto salita                 <- Donatella sorgente S17
+019: Rettori salto                        <- Donatella sorgente S18
+020: Rettori calcio aereo                 <- Donatella sorgente S19
+021: Rettori calcio aereo                 <- Donatella sorgente S20
+022: Rettori calcio aereo                 <- Donatella sorgente S21
+023: Rettori atterraggio                  <- Donatella sorgente S23
+024: Rettori atterraggio                  <- Donatella sorgente S24
+025: Rettori colpo braccio alto           <- Donatella sorgente S25
+026: Rettori colpo braccio alto           <- Donatella sorgente S26
+027: Rettori colpo braccio alto           <- Donatella sorgente S27
+028: Rettori colpo braccio alto           <- Donatella sorgente S28
+029: Rettori preparazione calcio alto     <- Donatella sorgente S29
+030: Rettori calcio alto                  <- Donatella sorgente S30
+031: Rettori calcio alto                  <- Donatella sorgente S31
+032: Rettori calcio alto                  <- Donatella sorgente S32
+033: Rettori colpo basso / ginocchiata    <- Donatella sorgente S33
+034: Rettori scivolata bassa              <- Donatella sorgente S35
+035: Rettori scivolata bassa              <- Donatella sorgente S36
+036: Rettori guardia/ripresa              <- Donatella sorgente S37
+037: Rettori reazione al colpo            <- Donatella sorgente S38
+038: Rettori reazione al colpo            <- Donatella sorgente S39
+039: Rettori reazione al colpo            <- Donatella sorgente S40
+040: Rettori reazione al colpo            <- Donatella sorgente S41
+041: Rettori KO a terra                   <- Donatella sorgente S42 (posa riusata)
+042: Rettori KO a terra                   <- Donatella sorgente S43 (posa riusata)
+043: Rettori rialzata                     <- Donatella sorgente S44
+044: Rettori rialzata                     <- Donatella sorgente S45
+045: Rettori ritorno in guardia           <- Donatella sorgente S46
+046: Rettori ritorno in guardia           <- Donatella sorgente S47
+047: Rettori esultanza                    <- Donatella sorgente S48
+048: Rettori esultanza                    <- Donatella sorgente S49
+049: Rettori sconfitta a terra            <- Donatella sorgente S42 (posa riusata)
+050: Rettori sconfitta a terra            <- Donatella sorgente S43 (posa riusata)
+051: Rettori speciale preparazione        <- Donatella sorgente S53
+052: Rettori speciale carica              <- Donatella sorgente S54
+053: Rettori speciale rilascio            <- Donatella sorgente S55
+054: Rettori speciale espansione          <- Donatella sorgente S56
+055: Rettori speciale massima             <- Donatella sorgente S57
+
+Fonte grafica: Spritesheet della Guerriera Rock Anni ’80.png. Segmentazione su componenti reali; sorgente con 58 figure, non 56 celle uniformi.
+Alcune pose sono riutilizzate e alcune transizioni meritano ulteriore rifinitura visiva; non alterare mosse/collisioni/mapping del motore.

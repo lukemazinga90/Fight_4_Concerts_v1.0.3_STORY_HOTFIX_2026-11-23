@@ -1,0 +1,31 @@
+FIGHT 4 CONCERTS — QA CAMPAGNE RETTORI / DONATELLA (v1.0.1 staging)
+20 novembre 2026 — CONTROLLO LOCALE; NON DEPLOYATO
+
+GRAFICA:
+- Donatella: 56 PNG RGBA 000–055 dal foglio approvato (vero design nero/oro/platino).
+- Sorgente contiene 58 figure: estrazione da silhouette, non griglia 8×7 arbitraria.
+- 56 nuove pose mappate per tipologia sul set originale di Rettori; 53 figure sorgente distinte, 3 riutilizzi per transizioni compatibili.
+- Dimensioni canvas dei 56 frame uguali ai corrispettivi di Rettori, compatibili con gli ancoraggi esistenti.
+- Nessuna modifica alle 56 pose originali di Rettori, ATTACK_FRAME_MAP o alle collisioni.
+- Mattia: 56 PNG identici byte per byte al pacchetto approvato, speciale Occhio del Dominio 051–055.
+
+NARRAZIONE:
+- Rettori: prologo in Veneto, 6 indizi, sospetto progressivo, mid-scene Donatella, Occhio riflesso nel vetro dopo la 6a vittoria, Mattia 7o, Max 8o.
+- Donatella: campagna speculare, 6 clausole, Max 7o, Mattia 8o, finale Splendido Splendente.
+- Battute preservate: Io ti conosco, Rettori. / citazione al contratto / Tesoro, se devi brillare, fallo da te. Non sotto il neon di un ufficio.
+- Prologo Donatella corretto per non anticipare immagine Sgreccia/Eureka.
+- Mattia NON giocabile; Donatella sbloccata nella casella di Rettori dopo la 7a vittoria.
+
+CONTROLLI:
+- Sintassi JavaScript: node --check PASS.
+- Runtime in Chromium con risorse locali incorporate: 15 combattenti riconosciuti; 56/56 Donatella e 56/56 Mattia caricati.
+- Match Donatella/Mattia in arena renderizzato; speciale Mattia seleziona frame 055 e nome OCCHIO DEL DOMINIO.
+- Test simulato settima vittoria Rettori: unlocks.donatella=true, selectedFighterIndex(7)=14, Mattia assente dal roster.
+- Nessun pageerror JS durante test osservati.
+- File richiesti dal motore: nessun percorso PNG esplicito mancante.
+
+LIMITI RESIDUI:
+- Tre pose sorgente riutilizzate (S12, S42, S43): piccole transizioni da rifinire in una patch eventuale, non blocco tecnico.
+- Il browser è stato collaudato con iniezione locale degli asset (nessun accesso al sito pubblico né Netlify).
+- NON eseguito: ciclo manuale completo di otto match con input touch su smartphone reale.
+- Non creata alcuna build/ZIP di deploy Netlify.

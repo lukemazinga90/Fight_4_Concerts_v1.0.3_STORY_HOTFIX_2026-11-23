@@ -1,0 +1,28 @@
+FIGHT 4 CONCERTS — QA MODALITA' EXTRA — v1.0.1 (NON PUBBLICATA)
+19 novembre 2026
+
+RISULTATI LOCALI
+- Sintassi JavaScript: validata con Node.js.
+- 8 personaggi × 25 estrazioni casuali per Sprint + Pogo: tutte valide,
+  nessun avversario duplicato e nessun autorivale.
+- Sprint: test avanzamento per 3 vittorie fino alla schermata conclusiva.
+- Ultimo Pogo: test avanzamento su 14 vittorie, HP mantenuti a 44,
+  sconfitta al primo incontro conclude la corsa.
+- Soundcheck: scelta 15 avversari, colpi registrati (4 danni su un hit
+  nel test), 4.600 tick senza countdown; dummy ancorato a x=284.
+- Menu pausa: apertura Comandi, chiusura, ripresa senza perdere lo stato.
+- Campagna e VS originali: percorsi di selezione ancora raggiungibili.
+- 112 accoppiamenti combattimento × 250 tick = 28.000 aggiornamenti:
+  nessun NaN, nessun personaggio fuori arena, zero eccezioni JavaScript.
+- Asset: 1.288 frame + 77 immagini; 1.365 file PNG confrontati per SHA256,
+  tutti identici alla bozza cumulativa prima della pulizia dei legacy.
+- Nessuno ZIP prodotto; nessun deploy Netlify.
+
+LIMITI DEL COLLAUDO
+- Simulazioni su Chromium locale; non sostituiscono test iPhone/Android.
+- Avanzamento completo in Sprint/Pogo forzato a livello di stato
+  per verificare la logica; il gameplay AI è stato simulato separatamente.
+- Nessuna verifica end-to-end dei salvataggi con localStorage accessibile
+  nel contesto di browser locale senza origine autorizzata; l'isolamento
+  è verificato dal codice e dai flussi simulati, da confermare su hosting.
+- Cache, prestazioni di rete, latenza input, stabilita' FPS da verificare.

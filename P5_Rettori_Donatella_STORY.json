@@ -1,0 +1,125 @@
+{
+  "status": "narrativa approvazione; non integrata nel motore",
+  "campaigns": {
+    "Rettori": {
+      "title": "La RAL dell’Anello",
+      "player": "Rettori",
+      "unlock_on_defeat": {
+        "fight": 7,
+        "enemy": "MattiaSgreccia",
+        "character": "DonatellaRettore"
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reward": "Toscana"
+        },
+        {
+          "round": 2,
+          "reward": "Sesto Fiorentino"
+        },
+        {
+          "round": 3,
+          "reward": "Reparto Marketing"
+        },
+        {
+          "round": 4,
+          "reward": "Settore caffè"
+        },
+        {
+          "round": 5,
+          "reward": "Macinacaffè"
+        },
+        {
+          "round": 6,
+          "reward": "Eureka"
+        },
+        {
+          "round": 7,
+          "opponent": "MattiaSgreccia",
+          "type": "BOSS BATTLE"
+        },
+        {
+          "round": 8,
+          "opponent": "MaxPezzali",
+          "type": "FINAL BOSS"
+        }
+      ],
+      "mid_after_round": 4,
+      "visual_eye_reflection_after_round": 6,
+      "special_frames": [
+        51,
+        52,
+        53,
+        54,
+        55
+      ]
+    },
+    "DonatellaRettore": {
+      "title": "Splendido Splendente",
+      "player": "DonatellaRettore",
+      "rounds": [
+        {
+          "round": 1,
+          "clause": "Bonus impossibile"
+        },
+        {
+          "round": 2,
+          "clause": "Esclusiva perpetua"
+        },
+        {
+          "round": 3,
+          "clause": "Flessibilità totale"
+        },
+        {
+          "round": 4,
+          "clause": "KPI dell’anima"
+        },
+        {
+          "round": 5,
+          "clause": "La grande famiglia"
+        },
+        {
+          "round": 6,
+          "clause": "Firma invisibile"
+        },
+        {
+          "round": 7,
+          "opponent": "MaxPezzali"
+        },
+        {
+          "round": 8,
+          "opponent": "MattiaSgreccia",
+          "type": "BOSS BATTLE"
+        }
+      ],
+      "mid_after_round": 4,
+      "unlock": null
+    }
+  },
+  "required_dialogue": {
+    "Mattia_Sgreccia_intro": [
+      "Io ti conosco, Rettori.",
+      "Un contratto per dominarli, uno per trovarli, uno per ghermirli e nel marketing incatenarli."
+    ],
+    "Donatella_Rettore_inspiration": [
+      "Tesoro, se devi brillare, fallo da te.",
+      "Non sotto il neon di un ufficio."
+    ]
+  },
+  "art_requirements": {
+    "eye_only_special_frames": [
+      51,
+      52,
+      53,
+      54,
+      55
+    ],
+    "non_special_unchanged": "000-050",
+    "eye_as_reflection": "vetro della sala riunioni",
+    "Rettori_battle_reference": "E. Honda",
+    "Mattia_unlockable": false,
+    "Donatella_alt_costume": false,
+    "dialogue_overlay": "engine only"
+  }
+}

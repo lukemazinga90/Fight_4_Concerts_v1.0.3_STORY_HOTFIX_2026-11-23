@@ -1,0 +1,68 @@
+FIGHT 4 CONCERTS - STANDARD SCALA, BASELINE E CALIBRAZIONE ROSTER
+Versione: v1.0.1 normalizzazione del 20/11/2026
+
+UNITA DEL MOTORE (NON DIMENSIONI FISSE DEL PNG)
+- Canvas HTML: 768 x 432 pixel fisici, coordinate logiche 384 x 216.
+- GROUND = Y 186 (coordinate logiche): linea di appoggio nel combattimento.
+- SPR_H = 96 (altezza di riferimento): NON impone PNG quadrati 96x96.
+- I file PNG individuali restano di dimensione variabile, numerati 000.png..055.png.
+- Guidotti (frame 000) è il benchmark: altezza visiva 93.00 px logici,
+  linea piedi esattamente Y 186 e figura in scala coerente con gli altri.
+
+FORMULA DI RENDERING ATTUALE
+- drawing scale k = RENDER_PROFILE[sheet].scale.
+- ctx.drawImage(image, -anchorX*k, -anchorY*k, metaWidth*k, metaHeight*k)
+  dopo ctx.translate(f.x, f.y). La ground line è il valore logico f.y=186.
+- In presenza di sorgenti PNG con dimensioni diverse dai metadati,
+  la scala geometrica per pixel della sorgente è metaWidth / naturalWidth * k
+  e metaHeight / naturalHeight * k.
+- Delta della base = ((bboxAlphaBottom * metaHeight/naturalHeight) - anchorY) * k.
+- Per pose NEUTRE e colpi con piede d'appoggio: delta 0 px (tolleranza ~1.5 px).
+  Per salti, cadute aeree e KO transitori la base PUO' essere più alta.
+- Non forzare TUTTI i frame alla ground line: i movimenti aerei devono restare in aria.
+
+COME PRODURRE UN NUOVO PERSONAGGIO
+1. Recuperare i 56 PNG del combattente base associato e la sua ATTACK_FRAME_MAP.
+2. Stessa tipologia di posa allo stesso indice (guardia, calci, danno, KO, speciale).
+3. Preservare proporzioni/design approvati (non fare semplici recolor se outfit diverso).
+4. Controllare dimensioni reali, bounding box alpha e riferimenti di ancoraggio.
+5. Calibrare RENDER_PROFILE e FRAME_FILES del NUOVO set, senza alterare il set base.
+6. Verificare 000,001,002,004,012,018,022,025,029,031,038,042,050,051..055
+   in arena e su una tavola con baseline comune.
+7. Controllare la speciale frame per frame; gli effetti non devono essere ritagliati.
+8. Eseguire QA delle 56 immagini (alpha, file validi) e test di regressione del gioco.
+9. Registra in changelog scala, offset, motivazione, asset modificati e test svolti.
+
+REGOLE DI TOLLERANZA
+- Campione: Guidotti h=93 px; un range di 88-100 px permette volutamente
+  personaggi più bassi/robusti. Max boss ~103 px è un'eccezione intenzionale.
+- La silhouette dipende dal design: non pareggiare automaticamente tutte le larghezze.
+- Piedi delle pose neutre entro ±1.5 px dalla ground line.
+- Mai ridisegnare i PNG originali per correggere solo scala/offset:
+  intervenire prima su RENDER_PROFILE e sugli anchor di FRAME_FILES.
+- Non prendere uno screenshot di una posa bassa per misurare l'altezza neutra:
+  controllare il frame 000 e l'animazione idle completa.
+- Evitare di inserire frame 003 (corsa) nel ciclo idle: frameFor ora cicla 000–002.
+
+PARAMETRI CORRETTI NELLA v1.0.1
+- PieroPelu: 0.57680 -> 0.62000; ancoraggi ereditati da Frillo (corretti)
+- MattiaSgreccia: 0.68148 -> 0.62500; anchorY 146 -> 154 per tutti i frame
+- VascoBrondi: 0.58125 -> 0.64000; regolazione anchorY mirata su idle, corsa, guardia, colpi a terra e KO
+- DonatellaRettore: 0.58974 -> 0.61500; ancoraggi ereditati da Rettori mantenuti
+
+VERIFICA REALIZZATA
+- 31 set controllati, inclusi ALT, rivali, nemici e boss.
+- 56 PNG per set (1736 frame), 1878 PNG totali (asset+frame) tutti leggibili.
+- Campioni idle frame 000: tutte le basi entro ±1.5px rispetto a Y=186.
+- 310 pose chiave (10 frame x 31 set) visionate e catalogate.
+- Test browser: schermate prima/dopo, speciale Mattia 051–055.
+- Regressione 589/589 test simulati di progressione/modalità, senza pageerror/404.
+- Test su smartphone reale: NON ESEGUITO. Non dichiarare release-ready.
+
+ARTE E SCENE ANCORA DA SISTEMARE PRIMA DEL DEPLOY
+- Sei immagini narrative di Giannini/Kurt hanno incorporata la vecchia
+  scritta "Pubblicazione incompleta" (non è un 404 attuale).
+- Rettori nel gioco indossa ancora la versione con gonna, anziché lo
+  spritesheet approvato con camicia a righe e shorts.
+- Altri confronti artistici (singole pose dei rivali ricostruiti) restano raccomandati.
+Questi rilievi sono separati dalla normalizzazione di scala/baseline.

@@ -1,0 +1,73 @@
+FIGHT 4 CONCERTS — MAPPATURA VISIVA RETTORI 56 FRAME
+====================================================
+Versione: 1.0 — 2026-11-20
+Scopo: questa è la sequenza VISIVA approvata del foglio Rettori usato come base
+per Rettori stessa, DonatellaRettore e MattiaSgreccia.
+Regola: quando si crea un personaggio derivato da Rettori, ogni indice deve
+corrispondere alla stessa TIPOLOGIA DI POSA del frame omologo qui elencato.
+Non basarsi sulla sola tabella nominale del motore: per questa famiglia di sprite
+prevale la sequenza visiva qui sotto.
+
+000 | guardia neutra A
+001 | guardia neutra B
+002 | guardia neutra C
+003 | neutra inclinata / transizione al movimento
+004 | corsa passo 1
+005 | corsa passo 2
+006 | corsa passo 3
+007 | corsa/frenata finale
+008 | neutra reset
+009 | neutra guardia stretta
+010 | attacco/push in piedi, preparazione
+011 | attacco/push in piedi, estensione 1
+012 | attacco/push in piedi, estensione 2 piena
+013 | guardia/ritorno in piedi
+014 | neutra guardia
+015 | neutra rilassata
+016 | guardia bassa / accosciata
+017 | attacco/push basso, preparazione
+018 | attacco/push basso, estensione 1
+019 | attacco/push basso, estensione 2
+020 | attacco/push basso, estensione 3 con motion blur
+021 | attacco/push basso, estensione 4 con motion blur
+022 | guardia bassa, ritorno A
+023 | guardia bassa, ritorno B
+024 | reset basso
+025 | ginocchiata / knee raise 1
+026 | ginocchiata / knee raise 2
+027 | neutra reset
+028 | crouch basso / preparazione scatto
+029 | scivolata o dash basso, preparazione
+030 | dash basso 1
+031 | dash basso 2
+032 | dash basso, impatto o recupero
+033 | guardia bassa raccolta
+034 | affondo basso / lunge in avanti
+035 | impatto basso / recovery a terra
+036 | guardia bassa reset A
+037 | guardia bassa reset B
+038 | neutra guardia
+039 | hit o block basso, raccolta
+040 | hit basso molto raccolto
+041 | salto, stacco / salita 1
+042 | salto, salita 2 / picco
+043 | attacco aereo o salto offensivo A
+044 | attacco aereo o salto offensivo B
+045 | atterraggio o crouch post-salto
+046 | recupero basso post-salto
+047 | neutra reset
+048 | neutra guardia finale
+049 | vittoria, braccia in alto 1
+050 | vittoria, braccia in alto 2
+051 | speciale, preparazione braccia aperte
+052 | speciale, carica onda 1
+053 | speciale, carica onda 2
+054 | speciale, rilascio onda
+055 | fine speciale / ritorno neutro
+
+Nota pratica:
+- 000-009 = idle + locomozione
+- 010-024 = famiglia push/guardie basse di riferimento Rettori
+- 025-037 = blocco ginocchio / dash basso / affondi
+- 038-048 = hit, salto, atterraggio, reset
+- 049-055 = vittoria + speciale

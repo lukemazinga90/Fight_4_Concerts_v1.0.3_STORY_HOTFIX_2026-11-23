@@ -1,0 +1,19 @@
+FIGHT 4 CONCERTS — CHECKPOINT DOPO CORREZIONE MATTIA
+
+{
+  "data": "2026-11-20",
+  "version": "v1.0.1 locale Mattia fix",
+  "folders_count": 31,
+  "frames": 1736,
+  "assets_png": 142,
+  "missing_asset_references": [],
+  "frame_count_errors": {},
+  "invalid_pngs": [],
+  "bad_mattia_frames": [],
+  "missing_campaign_assets": [],
+  "missing_modes": [],
+  "sha256_index": "0330fedaadceaff7268caad569865a478963115c73d644a0e73127409ef32878",
+  "scope": "QA statico completo + test browser su Mattia; non test fisico smartphone né playthrough manuale 15 campagne"
+}
+
+NOTA ARTISTICA: difetti preesistenti fuori ambito della correzione Mattia: sei tavole Giannini/Cobain con errore incorporato e vecchio outfit di Rettori in arena, già registrati nei precedenti QA.
